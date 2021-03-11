@@ -1,0 +1,14 @@
+2021-03-11 18:03:17,328 - ebanking -INFO - URL is opened
+2021-03-11 18:03:17,623 - ebanking -INFO - Entered UserId
+2021-03-11 18:03:17,788 - ebanking -INFO - Entered Password
+2021-03-11 18:03:19,581 - ebanking -INFO - Clicked on Login Button
+2021-03-11 18:03:23,416 - ebanking -INFO - Providing Customer Details.....
+2021-03-11 18:03:35,655 - ebanking -INFO - Customer information submitted and Validation Started....
+2021-03-11 18:03:35,741 - ebanking -INFO - Test Case Pass
+2021-03-12 00:27:19,180 - ebanking -INFO - URL is opened
+2021-03-12 00:27:19,624 - ebanking -INFO - Entered UserId
+2021-03-12 00:27:19,860 - ebanking -INFO - Entered Password
+2021-03-12 00:27:21,795 - ebanking -INFO - Clicked on Login Button
+2021-03-12 00:27:25,622 - ebanking -INFO - Providing Customer Details.....
+2021-03-12 00:27:33,359 - ebanking -INFO - Customer information submitted and Validation Started....
+2021-03-12 00:27:33,450 - ebanking -INFO - Test Case Pass

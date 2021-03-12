@@ -5,27 +5,21 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class AddCustomerPage {
+public class EditCustomerPage {
 
-	WebDriver ldriver;
+WebDriver ldriver;
 	
-	public AddCustomerPage(WebDriver rdriver) {
+	public EditCustomerPage(WebDriver rdriver) {
 		ldriver=rdriver;
 		PageFactory.initElements(rdriver, this);
 	}
 	
 	
-	@FindBy(xpath="//a[normalize-space()='New Customer']")
-	WebElement lnkAddNewCustomer;
+	@FindBy(xpath="//a[normalize-space()='Edit Customer']")
+	WebElement lnkEditCustomer;
 	
-	@FindBy(xpath="//input[@name='name']")
-	WebElement CName;
-	
-	@FindBy(xpath="//input[@value='m']")
-	WebElement gender;
-	
-	@FindBy(xpath="//input[@id='dob']")
-	WebElement dateOfBirth;
+	@FindBy(xpath="//input[@name='cusid']")
+	WebElement customerId;
 	
 	@FindBy(xpath="//textarea[@name='addr']")
 	WebElement address;
@@ -45,87 +39,65 @@ public class AddCustomerPage {
 	@FindBy(xpath="//input[@name='emailid']")
 	WebElement email;
 	
-	@FindBy(xpath="//input[@name='password']")
-	WebElement password;
-	
 	@FindBy(xpath="//input[@name='sub']")
+	WebElement editSubmitBtn;
+	
+	@FindBy(xpath="//input[@name='AccSubmit']")
 	WebElement submitBtn;
 	
 	@FindBy(xpath="//input[@name='res']")
 	WebElement resetBtn;
+
+
 	
 	
 	
-	public void lnkAddNewCustomer() {
-		lnkAddNewCustomer.click();
+	public void lnkEditCustomer() {
+		lnkEditCustomer.click();
 	}
 
-	public void CName(String name) {
-		CName.sendKeys(name);
+	public void cId(String id) {
+		customerId.sendKeys(id);
 	}
 
-	public void gender() {
-		gender.click();
-	}
-
-	public void dateOfBirth(String mm,String dd,String yy) {
-		dateOfBirth.sendKeys(mm);
-		dateOfBirth.sendKeys(dd);
-		dateOfBirth.sendKeys(yy);
-	}
 	public void address(String add) {
+		address.clear();
 		address.sendKeys(add);
 	}
 	
 	public void city(String cty) {
+		city.clear();
 		city.sendKeys(cty);
 	}
 	public void state(String sta) {
+		state.clear();
 		state.sendKeys(sta);
 	}
 	public void pin(String pn) {
+		pin.clear();
 		pin.sendKeys(pn);
 	}
 	public void mobileNo(String number) {
+		mobileNo.clear();
 		mobileNo.sendKeys(number);
 	}
 	
 	public void email(String mail) {
+		email.clear();
 		email.sendKeys(mail);
 	}
-	public void password(String pass) {
-		password.sendKeys(pass);
-	}
+
 	public void submitBtn() {
 		submitBtn.click();
 	}
+	
+	public void editSubmitBtn() {
+		editSubmitBtn.click();
+	}
+	
 	public void resetBtn() {
 		resetBtn.click();
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 }

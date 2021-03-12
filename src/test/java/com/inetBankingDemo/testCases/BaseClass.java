@@ -27,6 +27,7 @@ public class BaseClass {
 	public String userId = readConfig.getUserId();
 	public String password = readConfig.getUserPassword();
 	public String homePageTitle = readConfig.getHomePagetitle();
+	public String customerId = readConfig.getCustomerId();
 	public static WebDriver driver;
 	public static Logger logger;
 

@@ -12,3 +12,85 @@
 2021-03-12 00:27:25,622 - ebanking -INFO - Providing Customer Details.....
 2021-03-12 00:27:33,359 - ebanking -INFO - Customer information submitted and Validation Started....
 2021-03-12 00:27:33,450 - ebanking -INFO - Test Case Pass
+2021-03-12 10:30:58,205 - ebanking -INFO - URL is opened
+2021-03-12 10:30:59,166 - ebanking -INFO - Entered UserId
+2021-03-12 10:30:59,384 - ebanking -INFO - Entered Password
+2021-03-12 10:31:01,409 - ebanking -INFO - Clicked on Login Button
+2021-03-12 10:31:05,278 - ebanking -INFO - Providing Customer Details.....
+2021-03-12 10:31:13,309 - ebanking -INFO - Customer information submitted and Validation Started....
+2021-03-12 10:31:13,399 - ebanking -INFO - Test Case Pass
+2021-03-12 11:22:18,363 - ebanking -INFO - URL is opened
+2021-03-12 11:22:18,631 - ebanking -INFO - Entered UserId
+2021-03-12 11:22:18,764 - ebanking -INFO - Entered Password
+2021-03-12 11:22:20,458 - ebanking -INFO - Clicked on Login Button
+2021-03-12 11:22:50,019 - ebanking -INFO - URL is opened
+2021-03-12 11:22:50,330 - ebanking -INFO - Entered UserId
+2021-03-12 11:22:50,494 - ebanking -INFO - Entered Password
+2021-03-12 11:22:52,647 - ebanking -INFO - Clicked on Login Button
+2021-03-12 11:25:45,380 - ebanking -INFO - URL is opened
+2021-03-12 11:25:45,728 - ebanking -INFO - Entered UserId
+2021-03-12 11:25:45,870 - ebanking -INFO - Entered Password
+2021-03-12 11:25:48,080 - ebanking -INFO - Clicked on Login Button
+2021-03-12 11:25:55,271 - ebanking -INFO - Customer Id Verification Start....
+2021-03-12 11:25:55,309 - ebanking -INFO - Customer Id verification Success ............
+2021-03-12 11:28:59,914 - ebanking -INFO - URL is opened
+2021-03-12 11:29:00,128 - ebanking -INFO - Entered UserId
+2021-03-12 11:29:00,263 - ebanking -INFO - Entered Password
+2021-03-12 11:29:01,950 - ebanking -INFO - Clicked on Login Button
+2021-03-12 11:29:08,604 - ebanking -INFO - Customer Id Verification Start....
+2021-03-12 11:29:08,659 - ebanking -INFO - Customer Id verification Success ............
+2021-03-12 11:29:17,272 - ebanking -INFO - Edit Customer Form submition done...Now start validation.......
+2021-03-12 11:29:17,310 - ebanking -INFO - Test passed
+2021-03-12 11:39:05,918 - ebanking -INFO - URL is opened
+2021-03-12 11:39:06,141 - ebanking -INFO - Entered UserId
+2021-03-12 11:39:06,278 - ebanking -INFO - Entered Password
+2021-03-12 11:39:08,094 - ebanking -INFO - Clicked on Login Button
+2021-03-12 11:39:15,268 - ebanking -INFO - Customer Id Verification Start....
+2021-03-12 11:39:15,308 - ebanking -INFO - Customer Id verification Success ............
+2021-03-12 11:39:23,771 - ebanking -INFO - Edit Customer Form submition done...Now start validation.......
+2021-03-12 11:39:23,811 - ebanking -INFO - Test passed
+2021-03-12 11:46:49,085 - ebanking -INFO - URL is opened
+2021-03-12 11:46:49,366 - ebanking -INFO - Entered UserId
+2021-03-12 11:46:49,486 - ebanking -INFO - Entered Password
+2021-03-12 11:46:51,275 - ebanking -INFO - Clicked on Login Button
+2021-03-12 11:46:51,339 - ebanking -INFO - Login test Passed
+2021-03-12 11:46:57,158 - ebanking -INFO - URL is opened
+2021-03-12 11:46:57,348 - ebanking -INFO - Entered UserId
+2021-03-12 11:46:57,479 - ebanking -INFO - Entered Password
+2021-03-12 11:46:59,294 - ebanking -INFO - Clicked on Login Button
+2021-03-12 11:47:02,806 - ebanking -INFO - Providing Customer Details.....
+2021-03-12 11:47:10,306 - ebanking -INFO - Customer information submitted and Validation Started....
+2021-03-12 11:47:10,342 - ebanking -INFO - Test Case Pass
+2021-03-12 11:47:17,121 - ebanking -INFO - URL is opened
+2021-03-12 11:47:17,315 - ebanking -INFO - Entered UserId
+2021-03-12 11:47:17,446 - ebanking -INFO - Entered Password
+2021-03-12 11:47:19,216 - ebanking -INFO - Clicked on Login Button
+2021-03-12 11:47:26,260 - ebanking -INFO - Customer Id Verification Start....
+2021-03-12 11:47:26,302 - ebanking -INFO - Customer Id verification Success ............
+2021-03-12 11:47:34,984 - ebanking -INFO - Edit Customer Form submition done...Now start validation.......
+2021-03-12 11:47:35,019 - ebanking -INFO - Test passed
+2021-03-12 11:49:12,749 - ebanking -INFO - URL is opened
+2021-03-12 11:49:13,034 - ebanking -INFO - Entered UserId
+2021-03-12 11:49:13,191 - ebanking -INFO - Entered Password
+2021-03-12 11:49:14,939 - ebanking -INFO - Clicked on Login Button
+2021-03-12 11:49:21,682 - ebanking -INFO - Customer Id Verification Start....
+2021-03-12 11:52:03,958 - ebanking -INFO - URL is opened
+2021-03-12 11:52:04,209 - ebanking -INFO - Entered UserId
+2021-03-12 11:52:04,361 - ebanking -INFO - Entered Password
+2021-03-12 11:52:06,027 - ebanking -INFO - Clicked on Login Button
+2021-03-12 11:52:13,404 - ebanking -INFO - Customer Id Verification Start....
+2021-03-12 11:54:48,388 - ebanking -INFO - URL is opened
+2021-03-12 11:54:48,635 - ebanking -INFO - Entered UserId
+2021-03-12 11:54:48,788 - ebanking -INFO - Entered Password
+2021-03-12 11:54:50,649 - ebanking -INFO - Clicked on Login Button
+2021-03-12 11:54:57,100 - ebanking -INFO - Customer Id Verification Start....
+2021-03-12 11:55:14,233 - ebanking -INFO - URL is opened
+2021-03-12 11:55:14,505 - ebanking -INFO - Entered UserId
+2021-03-12 11:55:14,670 - ebanking -INFO - Entered Password
+2021-03-12 11:55:16,327 - ebanking -INFO - Clicked on Login Button
+2021-03-12 11:55:16,342 - ebanking -INFO - Login test Passed
+2021-03-12 11:55:27,304 - ebanking -INFO - Providing Customer Details.....
+2021-03-12 11:55:34,020 - ebanking -INFO - Customer information submitted and Validation Started....
+2021-03-12 11:55:47,988 - ebanking -INFO - Customer Id Verification Start....
+2021-03-12 12:14:47,928 - ebanking -INFO - URL is opened
+2021-03-12 12:14:57,750 - ebanking -INFO - URL is opened

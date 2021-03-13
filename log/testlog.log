@@ -94,3 +94,37 @@
 2021-03-12 11:55:47,988 - ebanking -INFO - Customer Id Verification Start....
 2021-03-12 12:14:47,928 - ebanking -INFO - URL is opened
 2021-03-12 12:14:57,750 - ebanking -INFO - URL is opened
+2021-03-13 19:48:19,534 - ebanking -INFO - URL is opened
+2021-03-13 19:48:19,864 - ebanking -INFO - Entered UserId
+2021-03-13 19:48:20,002 - ebanking -INFO - Entered Password
+2021-03-13 19:48:21,811 - ebanking -INFO - Clicked on Login Button
+2021-03-13 19:48:28,164 - ebanking -INFO - Customer Id verification start......
+2021-03-13 19:48:28,380 - ebanking -INFO - Alert For Confirming Delete customer
+2021-03-13 19:48:30,441 - ebanking -WARN - Delete Customer test Failed...
+2021-03-13 19:52:07,922 - ebanking -INFO - URL is opened
+2021-03-13 19:52:08,273 - ebanking -INFO - Entered UserId
+2021-03-13 19:52:08,417 - ebanking -INFO - Entered Password
+2021-03-13 19:52:10,196 - ebanking -INFO - Clicked on Login Button
+2021-03-13 19:52:16,410 - ebanking -INFO - Customer Id verification start......
+2021-03-13 19:52:16,654 - ebanking -INFO - Alert For Confirming Delete customer
+2021-03-13 19:52:18,718 - ebanking -WARN - Delete Customer test Passed...
+2021-03-13 19:58:46,438 - ebanking -INFO - URL is opened
+2021-03-13 19:58:46,692 - ebanking -INFO - Entered UserId
+2021-03-13 19:58:46,844 - ebanking -INFO - Entered Password
+2021-03-13 19:58:49,297 - ebanking -INFO - Clicked on Login Button
+2021-03-13 19:58:55,108 - ebanking -INFO - Customer Id verification start......
+2021-03-13 19:58:55,333 - ebanking -INFO - Alert For Confirming Delete customer
+2021-03-13 19:58:57,378 - ebanking -WARN - Delete Customer test Failed...
+2021-03-13 20:00:20,697 - ebanking -INFO - URL is opened
+2021-03-13 20:00:20,918 - ebanking -INFO - Entered UserId
+2021-03-13 20:00:21,048 - ebanking -INFO - Entered Password
+2021-03-13 20:00:22,713 - ebanking -INFO - Clicked on Login Button
+2021-03-13 20:00:28,524 - ebanking -INFO - Customer Id verification start......
+2021-03-13 20:00:28,721 - ebanking -INFO - Alert For Confirming Delete customer
+2021-03-13 20:02:28,770 - ebanking -INFO - URL is opened
+2021-03-13 20:02:29,030 - ebanking -INFO - Entered UserId
+2021-03-13 20:02:29,178 - ebanking -INFO - Entered Password
+2021-03-13 20:02:30,845 - ebanking -INFO - Clicked on Login Button
+2021-03-13 20:02:36,676 - ebanking -INFO - Customer Id verification start......
+2021-03-13 20:02:36,890 - ebanking -INFO - Alert For Confirming Delete customer
+2021-03-13 20:02:38,924 - ebanking -WARN - Delete Customer test Failed...

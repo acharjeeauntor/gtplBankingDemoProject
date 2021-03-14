@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="InetBankingV1">
+<suite name="GptlBanking Demo">
 
 <listeners>
 <listener class-name="com.inetBankingDemo.utilities.Reporting"/>
@@ -14,8 +14,12 @@
        <class name="com.inetBankingDemo.testCases.TC_LoginDDT_002"/> 
        <class name="com.inetBankingDemo.testCases.TC_LoginTest_001"/>
          <class name="com.inetBankingDemo.testCases.TC_AddCustomerTest_003"/>
-         <class name="com.inetBankingDemo.testCases.TC_EditCustomerTest_004"/>-->
-         <class name="com.inetBankingDemo.testCases.TC_DeleteCustomerTest_005"/>
+         <class name="com.inetBankingDemo.testCases.TC_EditCustomerTest_004"/>
+         <class name="com.inetBankingDemo.testCases.TC_DeleteCustomerTest_005"/>-->
+         <class name="com.inetBankingDemo.testCases.TC_NewAccountTest_006"/>
+         <class name="com.inetBankingDemo.testCases.TC_EditAccountTest_007"/>
+         <class name="com.inetBankingDemo.testCases.TC_DeleteAccountTest_008"/>
+         
          
          
        

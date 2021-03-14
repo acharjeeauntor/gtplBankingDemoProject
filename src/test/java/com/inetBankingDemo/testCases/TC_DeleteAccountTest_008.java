@@ -1,16 +1,11 @@
 package com.inetBankingDemo.testCases;
-
 import java.io.IOException;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import com.inetBankingDemo.pageObjects.DeleteCustomerPage;
+import com.inetBankingDemo.pageObjects.DeleteAccountPage;
 import com.inetBankingDemo.pageObjects.LoginPage;
 
-public class TC_DeleteCustomerTest_005 extends BaseClass{
-
-	
+public class TC_DeleteAccountTest_008 extends BaseClass{
 	@Test(priority = 1)
 	public void loginToTheApplication() throws InterruptedException, IOException {
 		LoginPage lp = new LoginPage(driver);
@@ -27,36 +22,31 @@ public class TC_DeleteCustomerTest_005 extends BaseClass{
 	
 	
 	@Test(priority=2)
-	public void deleteCustomer() throws InterruptedException, IOException {
-		DeleteCustomerPage dc = new DeleteCustomerPage(driver);
-		dc.lnkDeleteCustomer();
+	public void deleteAccount() throws InterruptedException, IOException {
+		DeleteAccountPage dacc = new DeleteAccountPage(driver);
+		dacc.lnkDeleteAccount();
 		Thread.sleep(2000);
 		
-		logger.info("Customer Id verification start......");
+		logger.info("Account no. verification start......");
 		
-		dc.cId(customerId);
-		dc.submitBtn();
+		dacc.accountNo(accountId);
+		dacc.submitBtn();
 		
-		logger.info("Alert For Confirming Delete customer");
+		logger.info("Alert For Confirming Delete Account");
 		driver.switchTo().alert().accept();
 		Thread.sleep(2000);
 		
-		if(driver.switchTo().alert().getText().equals("Customer does not exist!!")){
-			logger.warn("Delete Customer test Failed...");
+		if(driver.switchTo().alert().getText().equals("Account does not exist")){
+			logger.warn("Delete Account test Failed...");
 			driver.switchTo().alert().accept();
 			// Alert Box Shoho Screentshoot neya jay na .So Alert accept korar por Screenshot nite hbe.
-			captureScreen(driver, "deleteCustomer");
+			//captureScreen(driver, "deleteCustomer");
 			Assert.fail();
-		}else if(driver.switchTo().alert().getText().equals("Customer deleted Successfully")) {
-			logger.info("Delete Customer test Passed...");
+		}else if(driver.switchTo().alert().getText().equals("Account Deleted Sucessfully")) {
+			logger.info("Delete Account test Passed...");
 			Assert.assertTrue(true);
 			driver.switchTo().alert().accept();
 		}
 		
 	}
-	
-	
-	
-	
-	
 }

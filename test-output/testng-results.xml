@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-03-11T16:05:50 BDT" name="InetBankingV1" finished-at="2021-03-11T16:06:10 BDT" duration-ms="20426">
+  <suite started-at="2021-03-14T10:29:51 BDT" name="GptlBanking Demo" finished-at="2021-03-14T10:30:08 BDT" duration-ms="17438">
     <groups>
     </groups>
-    <test started-at="2021-03-11T16:05:50 BDT" name="BankingApp Test" finished-at="2021-03-11T16:06:10 BDT" duration-ms="20426">
-      <class name="com.inetBankingDemo.testCases.TC_AddCustomerTest_003">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.inetBankingDemo.testCases.TC_AddCustomerTest_003@65466a6a]" started-at="2021-03-11T16:05:50 BDT" name="setUp" finished-at="2021-03-11T16:05:56 BDT" duration-ms="5691" status="PASS">
+    <test started-at="2021-03-14T10:29:51 BDT" name="BankingApp Test" finished-at="2021-03-14T10:30:08 BDT" duration-ms="17438">
+      <class name="com.inetBankingDemo.testCases.TC_DeleteAccountTest_008">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.inetBankingDemo.testCases.TC_DeleteAccountTest_008@65466a6a]" started-at="2021-03-14T10:29:51 BDT" name="setUp" finished-at="2021-03-14T10:29:57 BDT" duration-ms="5819" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,19 +18,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="addNewcustomer()[pri:1, instance:com.inetBankingDemo.testCases.TC_AddCustomerTest_003@65466a6a]" started-at="2021-03-11T16:05:56 BDT" name="addNewcustomer" finished-at="2021-03-11T16:06:01 BDT" duration-ms="5317" status="PASS">
+        <test-method signature="loginToTheApplication()[pri:1, instance:com.inetBankingDemo.testCases.TC_DeleteAccountTest_008@65466a6a]" started-at="2021-03-14T10:29:57 BDT" name="loginToTheApplication" finished-at="2021-03-14T10:30:02 BDT" duration-ms="5207" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addNewcustomer -->
-        <test-method signature="addNewcustomer2()[pri:2, instance:com.inetBankingDemo.testCases.TC_AddCustomerTest_003@65466a6a]" started-at="2021-03-11T16:06:01 BDT" name="addNewcustomer2" finished-at="2021-03-11T16:06:10 BDT" duration-ms="8262" status="PASS">
+        </test-method> <!-- loginToTheApplication -->
+        <test-method signature="deleteCustomer()[pri:2, instance:com.inetBankingDemo.testCases.TC_DeleteAccountTest_008@65466a6a]" started-at="2021-03-14T10:30:02 BDT" name="deleteCustomer" finished-at="2021-03-14T10:30:07 BDT" duration-ms="5097" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addNewcustomer2 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.inetBankingDemo.testCases.TC_AddCustomerTest_003@65466a6a]" started-at="2021-03-11T16:06:10 BDT" name="tearDown" finished-at="2021-03-11T16:06:10 BDT" duration-ms="844" status="PASS">
+        </test-method> <!-- deleteCustomer -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.inetBankingDemo.testCases.TC_DeleteAccountTest_008@65466a6a]" started-at="2021-03-14T10:30:07 BDT" name="tearDown" finished-at="2021-03-14T10:30:08 BDT" duration-ms="974" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.inetBankingDemo.testCases.TC_AddCustomerTest_003 -->
+      </class> <!-- com.inetBankingDemo.testCases.TC_DeleteAccountTest_008 -->
     </test> <!-- BankingApp Test -->
-  </suite> <!-- InetBankingV1 -->
+  </suite> <!-- GptlBanking Demo -->
 </testng-results>

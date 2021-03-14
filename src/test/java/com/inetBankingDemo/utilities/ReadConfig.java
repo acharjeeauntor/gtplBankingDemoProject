@@ -61,4 +61,10 @@ public class ReadConfig {
 		return customerId;
 	}
 	
+	public String getAccountId() {
+		String accountId  = pro.getProperty("accountId");
+		return accountId;
+	}
+	
+	
 }

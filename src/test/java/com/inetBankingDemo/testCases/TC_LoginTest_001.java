@@ -15,10 +15,8 @@ public class TC_LoginTest_001 extends BaseClass{
 	@Test
 	public void loginTest() throws InterruptedException, IOException
 	{
-		
-		
+
 		LoginPage lp = new LoginPage(driver);
-	
 		lp.setUserId(userId);
 		logger.info("Entered UserId");
 		

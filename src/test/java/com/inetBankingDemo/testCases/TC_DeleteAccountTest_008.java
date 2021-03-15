@@ -6,24 +6,12 @@ import com.inetBankingDemo.pageObjects.DeleteAccountPage;
 import com.inetBankingDemo.pageObjects.LoginPage;
 
 public class TC_DeleteAccountTest_008 extends BaseClass{
-	@Test(priority = 1)
-	public void loginToTheApplication() throws InterruptedException, IOException {
-		LoginPage lp = new LoginPage(driver);
-		lp.setUserId(userId);
-		logger.info("Entered UserId");
-		lp.setUserPassword(password);
-		logger.info("Entered Password");
-		lp.clickLogin();
-		logger.info("Clicked on Login Button");
-
-		Thread.sleep(3000);
-
-	}
 	
 	
-	@Test(priority=2)
+	@Test(priority=1)
 	public void deleteAccount() throws InterruptedException, IOException {
 		DeleteAccountPage dacc = new DeleteAccountPage(driver);
+		loginToTheApplication();
 		dacc.lnkDeleteAccount();
 		Thread.sleep(2000);
 		

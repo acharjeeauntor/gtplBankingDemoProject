@@ -10,23 +10,11 @@ import com.inetBankingDemo.pageObjects.NewAccountPage;
 
 public class TC_NewAccountTest_006 extends BaseClass{
 
-	
-	@Test(priority = 1)
-	public void loginToTheApplication() throws InterruptedException, IOException {
-		LoginPage lp = new LoginPage(driver);
-		lp.setUserId(userId);
-		logger.info("Entered UserId");
-		lp.setUserPassword(password);
-		logger.info("Entered Password");
-		lp.clickLogin();
-		logger.info("Clicked on Login Button");
 
-		Thread.sleep(3000);
-
-	}
 	
-	@Test(priority=2)
-	public void createNewAccount() {
+	@Test(priority=1)
+	public void createNewAccount() throws InterruptedException, IOException {
+		loginToTheApplication();
 		NewAccountPage newAcc = new NewAccountPage(driver);
 		newAcc.lnkNewAccount();
 		logger.info("New Account information adding......");

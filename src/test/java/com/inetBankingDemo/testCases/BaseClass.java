@@ -17,15 +17,16 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.*;
 
+import com.inetBankingDemo.pageObjects.LoginPage;
 import com.inetBankingDemo.utilities.ReadConfig;
 
 public class BaseClass {
 
-	ReadConfig readConfig = new ReadConfig();
+	static ReadConfig readConfig = new ReadConfig();
 
 	public String baseUrl = readConfig.getApplicationUrl();
-	public String userId = readConfig.getUserId();
-	public String password = readConfig.getUserPassword();
+	public static String userId = readConfig.getUserId();
+	public static String password = readConfig.getUserPassword();
 	public String homePageTitle = readConfig.getHomePagetitle();
 	public String customerId = readConfig.getCustomerId();
 	public String accountId = readConfig.getAccountId();
@@ -96,6 +97,18 @@ public class BaseClass {
 	public static String randomeNum() {
 		String generatedString2 = RandomStringUtils.randomNumeric(4);
 		return (generatedString2);
+	}
+	
+	public static void loginToTheApplication() throws InterruptedException, IOException {
+		LoginPage lp = new LoginPage(driver);
+		lp.setUserId(userId);
+		logger.info("Entered UserId");
+		lp.setUserPassword(password);
+		logger.info("Entered Password");
+		lp.clickLogin();
+		logger.info("Clicked on Login Button");
+		Thread.sleep(2000);
+
 	}
 	
 	

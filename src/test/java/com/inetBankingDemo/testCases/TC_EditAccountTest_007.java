@@ -10,23 +10,13 @@ import com.inetBankingDemo.pageObjects.EditCustomerPage;
 import com.inetBankingDemo.pageObjects.LoginPage;
 
 public class TC_EditAccountTest_007 extends BaseClass {
+	
+
 	@Test(priority = 1)
-	public void loginToTheApplication() throws InterruptedException, IOException {
-		LoginPage lp = new LoginPage(driver);
-		lp.setUserId(userId);
-		logger.info("Entered UserId");
-		lp.setUserPassword(password);
-		logger.info("Entered Password");
-		lp.clickLogin();
-		logger.info("Clicked on Login Button");
-
-		Thread.sleep(3000);
-
-	}
-
-	@Test(priority = 2)
 	public void accountIdVerification() throws IOException, InterruptedException {
+		loginToTheApplication();
 		EditAccountPage eap = new EditAccountPage(driver);
+		
 		eap.lnkEditAccount();
 		Thread.sleep(2000);
 		eap.accountId(accountId);

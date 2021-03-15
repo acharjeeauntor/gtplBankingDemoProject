@@ -11,23 +11,12 @@ import com.inetBankingDemo.pageObjects.LoginPage;
 public class TC_EditCustomerTest_004 extends BaseClass {
 	
 
+
 	@Test(priority = 1)
-	public void loginToTheApplication() throws InterruptedException, IOException {
-		LoginPage lp = new LoginPage(driver);
-		lp.setUserId(userId);
-		logger.info("Entered UserId");
-		lp.setUserPassword(password);
-		logger.info("Entered Password");
-		lp.clickLogin();
-		logger.info("Clicked on Login Button");
-
-		Thread.sleep(3000);
-
-	}
-
-	@Test(priority = 2)
 	public void customerIdVerification() throws IOException, InterruptedException {
+		loginToTheApplication();
 		EditCustomerPage ecp = new EditCustomerPage(driver);
+		
 		ecp.lnkEditCustomer();
 		Thread.sleep(2000);
 		ecp.cId(customerId);

@@ -377,3 +377,84 @@
 2021-03-15 12:19:18,949 [main] INFO ebanking - Entered UserId
 2021-03-15 12:19:19,139 [main] INFO ebanking - Entered Password
 2021-03-15 12:19:19,584 [main] INFO ebanking - Clicked on Login Button
+2021-03-16 09:19:19,247 [main] INFO ebanking - URL is opened
+2021-03-16 09:19:19,592 [main] INFO ebanking - Entered UserId
+2021-03-16 09:19:19,727 [main] INFO ebanking - Entered Password
+2021-03-16 09:19:21,738 [main] INFO ebanking - Clicked on Login Button
+2021-03-16 09:19:26,610 [main] INFO ebanking - Account no. verification start......
+2021-03-16 09:19:27,939 [main] INFO ebanking - validation Start....
+2021-03-16 09:19:27,974 [main] INFO ebanking - Balance Enquiry Test Passed.
+2021-03-16 09:19:34,487 [main] INFO ebanking - URL is opened
+2021-03-16 09:19:34,702 [main] INFO ebanking - Entered UserId
+2021-03-16 09:19:34,834 [main] INFO ebanking - Entered Password
+2021-03-16 09:19:36,206 [main] INFO ebanking - Clicked on Login Button
+2021-03-16 09:19:41,394 [main] INFO ebanking - Account no. verification start......
+2021-03-16 09:19:43,290 [main] INFO ebanking - validation Start....
+2021-03-16 09:19:43,350 [main] INFO ebanking - Mini Statement Test Passed.
+2021-03-16 09:19:50,343 [main] INFO ebanking - URL is opened
+2021-03-16 09:19:50,552 [main] INFO ebanking - Entered UserId
+2021-03-16 09:19:50,697 [main] INFO ebanking - Entered Password
+2021-03-16 09:19:52,410 [main] INFO ebanking - Clicked on Login Button
+2021-03-16 09:19:57,590 [main] INFO ebanking - Customized Statement Form......
+2021-03-16 09:19:59,754 [main] INFO ebanking - validation Start....
+2021-03-16 09:19:59,816 [main] WARN ebanking - Customised Statement Test failed.
+2021-03-16 09:20:06,831 [main] INFO ebanking - URL is opened
+2021-03-16 09:20:07,120 [main] INFO ebanking - Entered UserId
+2021-03-16 09:20:07,341 [main] INFO ebanking - Entered Password
+2021-03-16 09:20:09,394 [main] INFO ebanking - Clicked on Login Button
+2021-03-16 09:20:13,224 [main] INFO ebanking - validation Start....
+2021-03-16 09:20:13,235 [main] INFO ebanking - logOut Test Passed.
+2021-03-16 09:24:04,313 [main] INFO ebanking - URL is opened
+2021-03-16 09:24:04,744 [main] INFO ebanking - Entered UserId
+2021-03-16 09:24:04,866 [main] INFO ebanking - Entered Password
+2021-03-16 09:24:06,855 [main] INFO ebanking - Clicked on Login Button
+2021-03-16 09:24:11,658 [main] INFO ebanking - Account no. verification start......
+2021-03-16 09:24:13,332 [main] INFO ebanking - validation Start....
+2021-03-16 09:24:13,395 [main] INFO ebanking - Balance Enquiry Test Passed.
+2021-03-16 09:24:19,407 [main] INFO ebanking - URL is opened
+2021-03-16 09:24:19,619 [main] INFO ebanking - Entered UserId
+2021-03-16 09:24:19,731 [main] INFO ebanking - Entered Password
+2021-03-16 09:24:21,632 [main] INFO ebanking - Clicked on Login Button
+2021-03-16 09:24:26,679 [main] INFO ebanking - Account no. verification start......
+2021-03-16 09:24:27,984 [main] INFO ebanking - validation Start....
+2021-03-16 09:24:28,001 [main] INFO ebanking - Mini Statement Test Passed.
+2021-03-16 09:24:33,574 [main] INFO ebanking - URL is opened
+2021-03-16 09:24:33,773 [main] INFO ebanking - Entered UserId
+2021-03-16 09:24:33,909 [main] INFO ebanking - Entered Password
+2021-03-16 09:24:35,823 [main] INFO ebanking - Clicked on Login Button
+2021-03-16 09:24:40,848 [main] INFO ebanking - Customized Statement Form......
+2021-03-16 09:24:42,877 [main] INFO ebanking - validation Start....
+2021-03-16 09:24:42,913 [main] WARN ebanking - Customised Statement Test failed.
+2021-03-16 09:24:50,285 [main] INFO ebanking - URL is opened
+2021-03-16 09:24:50,527 [main] INFO ebanking - Entered UserId
+2021-03-16 09:24:50,680 [main] INFO ebanking - Entered Password
+2021-03-16 09:24:52,347 [main] INFO ebanking - Clicked on Login Button
+2021-03-16 09:24:56,002 [main] INFO ebanking - validation Start....
+2021-03-16 09:24:56,012 [main] INFO ebanking - logOut Test Passed.
+2021-03-16 09:27:08,035 [main] INFO ebanking - URL is opened
+2021-03-16 09:27:08,379 [main] INFO ebanking - Entered UserId
+2021-03-16 09:27:08,492 [main] INFO ebanking - Entered Password
+2021-03-16 09:27:10,451 [main] INFO ebanking - Clicked on Login Button
+2021-03-16 09:27:15,673 [main] INFO ebanking - Account no. verification start......
+2021-03-16 09:27:16,887 [main] INFO ebanking - validation Start....
+2021-03-16 09:27:16,910 [main] INFO ebanking - Balance Enquiry Test Passed.
+2021-03-16 09:27:23,488 [main] INFO ebanking - URL is opened
+2021-03-16 09:27:23,765 [main] INFO ebanking - Entered UserId
+2021-03-16 09:27:23,909 [main] INFO ebanking - Entered Password
+2021-03-16 09:27:25,667 [main] INFO ebanking - Clicked on Login Button
+2021-03-16 09:27:31,833 [main] INFO ebanking - Account no. verification start......
+2021-03-16 09:27:33,446 [main] INFO ebanking - validation Start....
+2021-03-16 09:27:33,512 [main] INFO ebanking - Mini Statement Test Passed.
+2021-03-16 09:27:40,442 [main] INFO ebanking - URL is opened
+2021-03-16 09:27:40,639 [main] INFO ebanking - Entered UserId
+2021-03-16 09:27:40,746 [main] INFO ebanking - Entered Password
+2021-03-16 09:27:42,241 [main] INFO ebanking - Clicked on Login Button
+2021-03-16 09:27:47,694 [main] INFO ebanking - Customized Statement Form......
+2021-03-16 09:27:50,173 [main] INFO ebanking - validation Start....
+2021-03-16 09:27:50,235 [main] INFO ebanking - Customised Statement Test Passed.
+2021-03-16 09:27:56,709 [main] INFO ebanking - URL is opened
+2021-03-16 09:27:56,912 [main] INFO ebanking - Entered UserId
+2021-03-16 09:27:57,059 [main] INFO ebanking - Entered Password
+2021-03-16 09:27:58,997 [main] INFO ebanking - Clicked on Login Button
+2021-03-16 09:28:01,735 [main] INFO ebanking - validation Start....
+2021-03-16 09:28:01,743 [main] INFO ebanking - logOut Test Passed.

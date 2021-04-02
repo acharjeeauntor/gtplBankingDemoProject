@@ -6,10 +6,12 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.inetBankingDemo.pageObjects.CustomisedStatementPage;
+import com.inetBankingDemo.utilities.XLUtils;
 
 public class TC_CustomisedStatementTest_015 extends BaseClass{
 	@Test(priority=1)
 	public void customisedStatement() throws InterruptedException, IOException {
+		String accountId = XLUtils.getCellData(excelPath, "sheet1", 10, 0);
 		CustomisedStatementPage cs = new CustomisedStatementPage(driver);
 		loginToTheApplication();
 		cs.lnkCustomizedStatement();

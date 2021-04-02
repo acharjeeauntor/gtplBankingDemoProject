@@ -8,12 +8,14 @@ import org.testng.annotations.Test;
 import com.inetBankingDemo.pageObjects.ChangePasswordPage;
 import com.inetBankingDemo.pageObjects.FundTransferPage;
 import com.inetBankingDemo.pageObjects.LoginPage;
+import com.inetBankingDemo.utilities.XLUtils;
 
 public class TC_ChangePasswordTest_012 extends BaseClass{
 	
 	
 	@Test(priority=1)
 	public void ChangePasswordForm() throws InterruptedException, IOException {
+		String password = XLUtils.getCellData(excelPath, "sheet1", 1, 1);
 		loginToTheApplication();
 		ChangePasswordPage CP = new ChangePasswordPage(driver);
 		CP.lnkChangePassword();

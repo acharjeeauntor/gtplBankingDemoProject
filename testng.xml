@@ -22,11 +22,12 @@
           <class name="com.inetBankingDemo.testCases.TC_DepositTest_009"/>
          <class name="com.inetBankingDemo.testCases.TC_WithDrawalTest_010"/>
          <class name="com.inetBankingDemo.testCases.TC_FundTransferTest_011"/>
-         <class name="com.inetBankingDemo.testCases.TC_ChangePasswordTest_012"/>  -->
+         <class name="com.inetBankingDemo.testCases.TC_ChangePasswordTest_012"/>  
          <class name="com.inetBankingDemo.testCases.TC_BalanceEnquiryTest_013"/>
          <class name="com.inetBankingDemo.testCases.TC_MiniStatementTest_014"/>
          <class name="com.inetBankingDemo.testCases.TC_CustomisedStatementTest_015"/>
-         <class name="com.inetBankingDemo.testCases.TC_LogOutTest_016"/> 
+         <class name="com.inetBankingDemo.testCases.TC_LogOutTest_016"/> -->
+         <class name="com.inetBankingDemo.testCases.TC_LoginTest_001"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

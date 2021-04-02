@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import com.inetBankingDemo.pageObjects.LoginPage;
 import com.inetBankingDemo.pageObjects.NewAccountPage;
+import com.inetBankingDemo.utilities.XLUtils;
 
 public class TC_NewAccountTest_006 extends BaseClass{
 
@@ -14,6 +15,7 @@ public class TC_NewAccountTest_006 extends BaseClass{
 	
 	@Test(priority=1)
 	public void createNewAccount() throws InterruptedException, IOException {
+		String customerId = XLUtils.getCellData(excelPath, "sheet1", 6, 0);
 		loginToTheApplication();
 		NewAccountPage newAcc = new NewAccountPage(driver);
 		newAcc.lnkNewAccount();

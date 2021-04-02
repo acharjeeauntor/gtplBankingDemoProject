@@ -7,11 +7,13 @@ import org.testng.annotations.Test;
 
 import com.inetBankingDemo.pageObjects.DeleteCustomerPage;
 import com.inetBankingDemo.pageObjects.LoginPage;
+import com.inetBankingDemo.utilities.XLUtils;
 
 public class TC_DeleteCustomerTest_005 extends BaseClass {
 
 	@Test(priority = 1)
 	public void deleteCustomer() throws InterruptedException, IOException {
+		String customerId = XLUtils.getCellData(excelPath, "sheet1", 6, 0);
 
 		loginToTheApplication();
 		DeleteCustomerPage dc = new DeleteCustomerPage(driver);

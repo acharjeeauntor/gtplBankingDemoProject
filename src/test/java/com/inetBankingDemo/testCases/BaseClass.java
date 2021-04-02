@@ -19,24 +19,22 @@ import org.testng.annotations.*;
 
 import com.inetBankingDemo.pageObjects.LoginPage;
 import com.inetBankingDemo.utilities.ReadConfig;
+import com.inetBankingDemo.utilities.XLUtils;
 
 public class BaseClass {
 
 	static ReadConfig readConfig = new ReadConfig();
-
-	public String baseUrl = readConfig.getApplicationUrl();
-	public static String userId = readConfig.getUserId();
-	public static String password = readConfig.getUserPassword();
 	public String homePageTitle = readConfig.getHomePagetitle();
-	public String customerId = readConfig.getCustomerId();
-	public String accountId = readConfig.getAccountId();
+	public static String excelPath = readConfig.getExcelPath();
 
+	
 	public static WebDriver driver;
 	public static Logger logger;
 
 	@Parameters("browser")
 	@BeforeClass
-	public void setUp(String br) {
+	public void setUp(String br) throws IOException {
+		String baseUrl =XLUtils.getCellData(excelPath, "sheet1", 12, 1);
 		logger = Logger.getLogger("ebanking");
 		PropertyConfigurator.configure("Log4j.properties");
 
@@ -63,7 +61,6 @@ public class BaseClass {
 	public void tearDown() {
 		driver.quit();
 	}
-	
 	
 	
 	public void captureScreen(WebDriver driver,String tname) throws IOException {
@@ -100,6 +97,8 @@ public class BaseClass {
 	}
 	
 	public static void loginToTheApplication() throws InterruptedException, IOException {
+		String userId = XLUtils.getCellData(excelPath, "sheet1", 1, 0);
+		String password = XLUtils.getCellData(excelPath, "sheet1", 1, 1);
 		LoginPage lp = new LoginPage(driver);
 		lp.setUserId(userId);
 		logger.info("Entered UserId");

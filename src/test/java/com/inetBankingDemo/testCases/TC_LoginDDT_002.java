@@ -47,7 +47,7 @@ public class TC_LoginDDT_002 extends BaseClass{
 	@DataProvider(name="LoginData")
 	String[][] getData() throws IOException{
 		
-		String path = "./src/test/java/com/inetBankingDemo/testData/LoginData.xlsx";
+		String path = "./src/test/java/com/inetBankingDemo/testData/Data.xlsx";
 		int rowNum = XLUtils.getRowCount(path, "sheet1");
 		int colNum = XLUtils.getCellCount(path, "sheet1", 1);
 		

@@ -6,15 +6,16 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.inetBankingDemo.pageObjects.LoginPage;
+import com.inetBankingDemo.utilities.XLUtils;
 
 
 
 public class TC_LoginTest_001 extends BaseClass{
-
-	
 	@Test
 	public void loginTest() throws InterruptedException, IOException
 	{
+		String userId = XLUtils.getCellData(excelPath, "sheet1", 1, 0);
+		String password = XLUtils.getCellData(excelPath, "sheet1", 1, 1);
 
 		LoginPage lp = new LoginPage(driver);
 		lp.setUserId(userId);

@@ -8,12 +8,14 @@ import org.testng.annotations.Test;
 import com.inetBankingDemo.pageObjects.EditAccountPage;
 import com.inetBankingDemo.pageObjects.EditCustomerPage;
 import com.inetBankingDemo.pageObjects.LoginPage;
+import com.inetBankingDemo.utilities.XLUtils;
 
 public class TC_EditAccountTest_007 extends BaseClass {
 	
 
 	@Test(priority = 1)
 	public void accountIdVerification() throws IOException, InterruptedException {
+		String accountId = XLUtils.getCellData(excelPath, "sheet1", 10, 0);
 		loginToTheApplication();
 		EditAccountPage eap = new EditAccountPage(driver);
 		

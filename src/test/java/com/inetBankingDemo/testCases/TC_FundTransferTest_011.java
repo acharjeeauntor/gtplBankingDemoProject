@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import com.inetBankingDemo.pageObjects.FundTransferPage;
 import com.inetBankingDemo.pageObjects.LoginPage;
+import com.inetBankingDemo.utilities.XLUtils;
 
 public class TC_FundTransferTest_011 extends BaseClass{
 
@@ -14,6 +15,7 @@ public class TC_FundTransferTest_011 extends BaseClass{
 	
 	@Test(priority=1)
 	public void FundTransferForm() throws InterruptedException, IOException {
+		String accountId = XLUtils.getCellData(excelPath, "sheet1", 10, 0);
 		loginToTheApplication();
 		FundTransferPage fT = new FundTransferPage(driver);
 		fT.lnkFundTransfer();

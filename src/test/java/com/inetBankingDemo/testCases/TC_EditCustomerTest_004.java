@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import com.inetBankingDemo.pageObjects.EditCustomerPage;
 import com.inetBankingDemo.pageObjects.LoginPage;
+import com.inetBankingDemo.utilities.XLUtils;
 
 public class TC_EditCustomerTest_004 extends BaseClass {
 	
@@ -14,6 +15,7 @@ public class TC_EditCustomerTest_004 extends BaseClass {
 
 	@Test(priority = 1)
 	public void customerIdVerification() throws IOException, InterruptedException {
+		String customerId = XLUtils.getCellData(excelPath, "sheet1", 6, 0);
 		loginToTheApplication();
 		EditCustomerPage ecp = new EditCustomerPage(driver);
 		

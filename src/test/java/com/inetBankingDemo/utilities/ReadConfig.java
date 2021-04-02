@@ -19,22 +19,6 @@ public class ReadConfig {
 		}
 	}
 	
-	public String getApplicationUrl() {
-		String url  = pro.getProperty("baseUrl");
-		return url;
-	}
-	
-	
-	public String getUserId() {
-		
-		String uId  = pro.getProperty("userId");
-		return uId;
-	}
-	
-	public String getUserPassword() {
-		String pass  = pro.getProperty("password");
-		return pass;
-	}
 	public String getHomePagetitle() {
 		String title  = pro.getProperty("homePageTitle");
 		return title;
@@ -55,16 +39,9 @@ public class ReadConfig {
 		return iePath;
 	}
 	
-	
-	public String getCustomerId() {
-		String customerId  = pro.getProperty("customerId");
-		return customerId;
+	public String getExcelPath() {
+		String excelpath  = pro.getProperty("excelPath");
+		return excelpath;
 	}
-	
-	public String getAccountId() {
-		String accountId  = pro.getProperty("accountId");
-		return accountId;
-	}
-	
-	
+
 }

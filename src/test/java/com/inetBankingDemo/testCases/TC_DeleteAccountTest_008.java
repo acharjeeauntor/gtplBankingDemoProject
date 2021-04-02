@@ -4,12 +4,14 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.inetBankingDemo.pageObjects.DeleteAccountPage;
 import com.inetBankingDemo.pageObjects.LoginPage;
+import com.inetBankingDemo.utilities.XLUtils;
 
 public class TC_DeleteAccountTest_008 extends BaseClass{
 	
 	
 	@Test(priority=1)
 	public void deleteAccount() throws InterruptedException, IOException {
+		String accountId = XLUtils.getCellData(excelPath, "sheet1", 10, 0);
 		DeleteAccountPage dacc = new DeleteAccountPage(driver);
 		loginToTheApplication();
 		dacc.lnkDeleteAccount();

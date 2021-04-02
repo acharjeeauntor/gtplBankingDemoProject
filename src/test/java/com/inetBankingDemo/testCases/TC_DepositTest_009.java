@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.inetBankingDemo.pageObjects.DepositPage;
 import com.inetBankingDemo.pageObjects.LoginPage;
+import com.inetBankingDemo.utilities.XLUtils;
 
 public class TC_DepositTest_009 extends BaseClass{
 	
@@ -15,6 +16,7 @@ public class TC_DepositTest_009 extends BaseClass{
 	
 	@Test(priority=1)
 	public void depositForm() throws InterruptedException, IOException {
+		String accountId = XLUtils.getCellData(excelPath, "sheet1", 10, 0);
 		loginToTheApplication();
 		DepositPage dp = new DepositPage(driver);
 		dp.lnkDeposit();

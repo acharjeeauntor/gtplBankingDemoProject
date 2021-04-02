@@ -6,10 +6,12 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.inetBankingDemo.pageObjects.MiniStatementPage;
+import com.inetBankingDemo.utilities.XLUtils;
 
 public class TC_MiniStatementTest_014 extends BaseClass{
 	@Test(priority=1)
 	public void miniStatement() throws InterruptedException, IOException {
+		String accountId = XLUtils.getCellData(excelPath, "sheet1", 10, 0);
 		MiniStatementPage ms = new MiniStatementPage(driver);
 		loginToTheApplication();
 		ms.lnkMiniStatement();

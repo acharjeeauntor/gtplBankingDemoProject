@@ -17,16 +17,15 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.*;
 
-import com.guru99BankingDemo.pageObjects.LoginPage;
+import com.guru99BankingDemo.pageObjects.ManagerLoginPage;
 import com.guru99BankingDemo.utilities.ReadConfig;
-import com.guru99BankingDemo.utilities.XLUtils;
 
 public class BaseClass {
 
-	public ReadConfig readConfig = new ReadConfig();
-	public String homePageTitle = readConfig.getHomePagetitle();
-	public String baseUrl = readConfig.getBaseUrl();
-
+	public static ReadConfig readConfig = new ReadConfig();
+	public static String baseUrl = readConfig.getBaseUrl();
+	public static String userId = readConfig.getUserId();
+	public static String password = readConfig.getPassword();
 	
 	public static WebDriver driver;
 	public static Logger logger;
@@ -48,12 +47,7 @@ public class BaseClass {
 			System.setProperty("webdriver.ie.driver", readConfig.getIePath());
 			driver = new InternetExplorerDriver();
 		}
-
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.get(baseUrl);
-		logger.info("URL is opened");
-
 	}
 
 	@AfterClass
@@ -96,16 +90,9 @@ public class BaseClass {
 	}
 	
 	public static void loginToTheApplication() throws InterruptedException, IOException {
-//		String userId = XLUtils.getCellData(excelPath, "sheet1", 1, 0);
-//		String password = XLUtils.getCellData(excelPath, "sheet1", 1, 1);
-//		LoginPage lp = new LoginPage(driver);
-//		lp.setUserId(userId);
-//		logger.info("Entered UserId");
-//		lp.setUserPassword(password);
-//		logger.info("Entered Password");
-//		lp.clickLogin();
-//		logger.info("Clicked on Login Button");
-//		Thread.sleep(2000);
+		ManagerLoginPage objManagerLogin = new ManagerLoginPage(driver);
+		driver.get(baseUrl);
+		objManagerLogin.ManagerLogin(userId, password);
 
 	}
 	

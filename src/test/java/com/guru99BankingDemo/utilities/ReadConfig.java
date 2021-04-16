@@ -27,10 +27,6 @@ public class ReadConfig {
 		out.close();
 	}
 	
-	public String getHomePagetitle() {
-		String title  = pro.getProperty("homePageTitle");
-		return title;
-	}
 	
 	public String getChromePath() {
 		String chromePath  = pro.getProperty("chromepath");
@@ -51,5 +47,18 @@ public class ReadConfig {
 		String url  = pro.getProperty("baseUrl");
 		return url;
 	}
+	
+	public String getUserId() {
+		String id  = pro.getProperty("managerId");
+		return id;
+	}
+	
+	public String getPassword() {
+		String pass  = pro.getProperty("managerPass");
+		return pass;
+	}
+	
+	
+	
 
 }

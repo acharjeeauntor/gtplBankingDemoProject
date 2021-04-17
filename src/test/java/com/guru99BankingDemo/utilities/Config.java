@@ -3,12 +3,12 @@ package com.guru99BankingDemo.utilities;
 import java.io.*;
 import java.util.Properties;
 
-public class ReadConfig {
+public class Config {
 
 	Properties pro;
 	File src = new File("./Configuration/config.properties");
 	
-	public ReadConfig() {
+	public Config() {
 		try {
 			FileInputStream fis = new FileInputStream(src);
 			pro = new Properties();
@@ -19,10 +19,18 @@ public class ReadConfig {
 	}
 	
 	
-	public void writeManagerInfo(String id,String pass) throws IOException {
+	public void setManagerInfo(String id,String pass) throws IOException {
 		FileOutputStream out = new FileOutputStream(src);
 		pro.setProperty("managerId",id);
 		pro.setProperty("managerPass",pass);
+		pro.store(out, null);
+		out.close();
+	}
+	
+	
+	public void setCustomerId(String id) throws IOException {
+		FileOutputStream out = new FileOutputStream(src);
+		pro.setProperty("customerId",id);
 		pro.store(out, null);
 		out.close();
 	}
@@ -58,6 +66,15 @@ public class ReadConfig {
 		return pass;
 	}
 	
+	public String getManagerEmail() {
+		String email  = pro.getProperty("managerEmail");
+		return email;
+	}
+	
+	public String getCustomerId() {
+		String cId  = pro.getProperty("customerId");
+		return cId;
+	}
 	
 	
 

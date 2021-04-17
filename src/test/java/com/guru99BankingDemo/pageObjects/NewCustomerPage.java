@@ -1,13 +1,19 @@
 package com.guru99BankingDemo.pageObjects;
 
+import java.io.IOException;
+
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.guru99BankingDemo.utilities.Config;
+
 public class NewCustomerPage {
 	
 	AccountOptionsPage objAccountOptions;
+	Config config = new Config();
 	
 	WebDriver ldriver;
 	
@@ -56,9 +62,12 @@ public class NewCustomerPage {
 	@FindBy(name="res")
 	WebElement resetBtnElement;
 	
+	@FindBy(xpath="//tbody/tr[4]/td[2]")
+	WebElement getCustomerIdElement;
+	
 	
 	public void submitNewCustomerData(String name,String gender,String month,String day,String year,String address,
-			String city,String state,String pin,String mobile,String email,String password) throws InterruptedException {
+			String city,String state,String pin,String mobile,String email,String password) throws InterruptedException, IOException {
 		
 		objAccountOptions = new AccountOptionsPage(ldriver);
 		objAccountOptions.newCustomerOption();
@@ -81,6 +90,7 @@ public class NewCustomerPage {
 		emailElement.sendKeys(email);
 		passwordElement.sendKeys(password);
 		submitBtnElement.click();
+		Thread.sleep(2000);
 	}
 	
 	public void resetNewCustomerData(String name,String gender,String month,String day,String year,String address,

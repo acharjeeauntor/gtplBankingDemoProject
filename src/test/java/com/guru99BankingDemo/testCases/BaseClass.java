@@ -2,8 +2,6 @@ package com.guru99BankingDemo.testCases;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
-
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.log4j.Logger;
@@ -18,14 +16,16 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.*;
 
 import com.guru99BankingDemo.pageObjects.ManagerLoginPage;
-import com.guru99BankingDemo.utilities.ReadConfig;
+import com.guru99BankingDemo.utilities.Config;
 
 public class BaseClass {
 
-	public static ReadConfig readConfig = new ReadConfig();
-	public static String baseUrl = readConfig.getBaseUrl();
-	public static String userId = readConfig.getUserId();
-	public static String password = readConfig.getPassword();
+	public static Config config = new Config();
+	public static String baseUrl = config.getBaseUrl();
+	public static String userId = config.getUserId();
+	public static String password = config.getPassword();
+	public static String managerEmail = config.getManagerEmail();
+	public static String customerId = config.getCustomerId();
 	
 	public static WebDriver driver;
 	public static Logger logger;
@@ -37,14 +37,14 @@ public class BaseClass {
 		PropertyConfigurator.configure("Log4j.properties");
 
 		if (br.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", readConfig.getChromePath());
+			System.setProperty("webdriver.chrome.driver", config.getChromePath());
 			driver = new ChromeDriver();
 
 		} else if (br.equals("firefox")) {
-			System.setProperty("webdriver.gecko.driver", readConfig.getFirefoxPath());
+			System.setProperty("webdriver.gecko.driver", config.getFirefoxPath());
 			driver = new FirefoxDriver();
 		}else if(br.equals("ie")) {
-			System.setProperty("webdriver.ie.driver", readConfig.getIePath());
+			System.setProperty("webdriver.ie.driver", config.getIePath());
 			driver = new InternetExplorerDriver();
 		}
 		driver.manage().window().maximize();
@@ -80,12 +80,12 @@ public class BaseClass {
 	
 	public String randomestring()
 	{
-		String generatedstring=RandomStringUtils.randomAlphabetic(8);
+		String generatedstring=RandomStringUtils.randomAlphabetic(4);
 		return(generatedstring);
 	}
 	
 	public static String randomeNum() {
-		String generatedString2 = RandomStringUtils.randomNumeric(4);
+		String generatedString2 = RandomStringUtils.randomNumeric(6);
 		return (generatedString2);
 	}
 	

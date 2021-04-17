@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.guru99BankingDemo.utilities.ReadConfig;
+import com.guru99BankingDemo.utilities.Config;
 
 public class ManagerRegistrationPage {
 	WebDriver ldriver;
@@ -39,8 +39,8 @@ public class ManagerRegistrationPage {
 	}
 
 	public void setManagerInfo() throws IOException {
-		ReadConfig rc = new ReadConfig();
-		rc.writeManagerInfo(userIdElement.getText(), passwordElement.getText());
+		Config config = new Config();
+		config.setManagerInfo(userIdElement.getText(), passwordElement.getText());
 	}
 
 }

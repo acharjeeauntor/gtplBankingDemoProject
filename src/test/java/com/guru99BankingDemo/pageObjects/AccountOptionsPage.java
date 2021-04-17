@@ -17,6 +17,9 @@ public class AccountOptionsPage {
 	@FindBy(xpath = "//a[text()='New Customer']")
 	WebElement newCustomerBtnElement;
 	
+	@FindBy(xpath = "//a[text()='Delete Customer']")
+	WebElement deleteCustomerBtnElement;
+	
 	@FindBy(xpath = "//a[text()='Log out']")
 	WebElement logoutBtnElement;
 
@@ -25,6 +28,9 @@ public class AccountOptionsPage {
 		newCustomerBtnElement.click();
 	}
 
+	public void deleteCustomerOption() {
+		deleteCustomerBtnElement.click();
+	}
 	public void ManagerLogoutOption() {
 		logoutBtnElement.click();
 	}

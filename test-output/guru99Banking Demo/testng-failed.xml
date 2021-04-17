@@ -10,8 +10,8 @@
       <class name="com.guru99BankingDemo.testCases.CustomerModuleTest">
         <methods>
           <include name="setUp"/>
-          <include name="addNewCustomer" invocation-numbers="1"/>
           <include name="tearDown"/>
+          <include name="deleteCustomerUsingValidId"/>
         </methods>
       </class> <!-- com.guru99BankingDemo.testCases.CustomerModuleTest -->
     </classes>

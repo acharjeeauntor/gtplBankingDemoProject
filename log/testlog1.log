@@ -592,3 +592,42 @@
 2021-04-16 22:21:26,737 [main] INFO ebanking - URL is opened
 2021-04-16 22:21:33,624 [main] INFO ebanking - URL is opened
 2021-04-16 22:22:22,509 [main] INFO ebanking - URL is opened
+2021-04-17 09:46:45,297 [main] INFO ebanking - Login passed
+2021-04-17 09:50:41,631 [main] INFO ebanking - Login passed
+2021-04-17 09:50:48,171 [main] WARN ebanking - Login failed
+2021-04-17 09:50:54,535 [main] WARN ebanking - Login failed
+2021-04-17 09:51:01,088 [main] WARN ebanking - Login failed
+2021-04-17 09:51:06,742 [main] WARN ebanking - Login failed
+2021-04-17 09:51:14,422 [main] WARN ebanking - Login failed
+2021-04-17 09:51:24,072 [main] WARN ebanking - Login failed
+2021-04-17 10:04:45,599 [main] WARN ebanking - Test Failed
+2021-04-17 10:04:53,063 [main] WARN ebanking - Test Failed
+2021-04-17 10:05:00,563 [main] WARN ebanking - Test Failed
+2021-04-17 10:08:42,435 [main] INFO ebanking - Test Passed
+2021-04-17 10:08:48,184 [main] WARN ebanking - Test Failed
+2021-04-17 10:08:55,498 [main] WARN ebanking - Test Failed
+2021-04-17 10:12:30,850 [main] WARN ebanking - Test Failed
+2021-04-17 10:14:18,266 [main] INFO ebanking - Test Passed
+2021-04-17 10:14:23,838 [main] WARN ebanking - Test Failed
+2021-04-17 10:14:30,846 [main] WARN ebanking - Test Failed
+2021-04-17 10:52:54,266 [main] INFO ebanking - Test Passed
+2021-04-17 10:55:22,192 [main] INFO ebanking - Test Passed
+2021-04-17 10:55:30,082 [main] WARN ebanking - Test Failed
+2021-04-17 10:55:39,209 [main] WARN ebanking - Test Failed
+2021-04-17 21:04:49,219 [main] INFO ebanking - Test passed
+2021-04-17 21:04:52,497 [main] WARN ebanking - Test passed
+2021-04-17 21:04:55,398 [main] WARN ebanking - Test passed
+2021-04-17 21:04:57,826 [main] WARN ebanking - Test passed
+2021-04-17 21:05:00,303 [main] WARN ebanking - Test passed
+2021-04-17 21:05:03,601 [main] WARN ebanking - Test passed
+2021-04-17 21:05:14,245 [main] INFO ebanking - Test passed
+2021-04-17 21:05:22,221 [main] INFO ebanking - Test passed
+2021-04-17 21:05:27,703 [main] INFO ebanking - Test passed
+2021-04-17 21:05:34,587 [main] INFO ebanking - Test passed
+2021-04-17 21:05:43,256 [main] INFO ebanking - Test passed
+2021-04-17 21:05:51,418 [main] INFO ebanking - Test passed
+2021-04-17 21:06:37,712 [main] INFO ebanking - Test passed
+2021-04-17 22:12:24,852 [main] INFO ebanking - Test Passed
+2021-04-17 22:14:51,800 [main] INFO ebanking - Test Passed
+2021-04-17 22:48:00,336 [main] INFO ebanking - Test passed
+2021-04-17 22:53:54,891 [main] INFO ebanking - Test passed

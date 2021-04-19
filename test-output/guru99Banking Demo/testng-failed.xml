@@ -11,7 +11,7 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="deleteCustomerUsingValidId"/>
+          <include name="deleteCustomerUsingInvalidId"/>
         </methods>
       </class> <!-- com.guru99BankingDemo.testCases.CustomerModuleTest -->
     </classes>

@@ -26,6 +26,15 @@ public class EditCustomerPage extends BaseClass{
 	@FindBy(name = "res")
 	WebElement idFormResetBtnElement;
 	
+	@FindBy(name="name")
+	WebElement nameElement;
+	
+	@FindBy(name="dob")
+	WebElement dobElement;
+	
+	@FindBy(name="gender")
+	WebElement genderElement;
+	
 	@FindBy(name="addr")
 	WebElement addressElement;
 	
@@ -71,6 +80,22 @@ public class EditCustomerPage extends BaseClass{
 	return customerIdElement.getText().isEmpty();
 	}
 	
+	
+	public boolean isNameGenderBithDateEditable() throws InterruptedException {
+		objAccountOptions = new AccountOptionsPage(ldriver);
+		objAccountOptions.editCustomerOption();
+		customerIdElement.sendKeys(customerId);
+		idFormSubmitBtnElement.click();
+		Thread.sleep(2000);
+		
+		if(nameElement.isEnabled()==true||genderElement.isEnabled()==true||dobElement.isEnabled()==true) {
+			return true;
+		}else {
+			return false;
+		}
+		
+		}
+		
 	
 	public void editCustomerData(String address,String city,String state,String pin,String mobile,String email) throws InterruptedException {
 		objAccountOptions = new AccountOptionsPage(ldriver);

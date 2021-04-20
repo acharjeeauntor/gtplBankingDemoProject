@@ -26,6 +26,8 @@ public class BaseClass {
 	public static String password = config.getPassword();
 	public static String managerEmail = config.getManagerEmail();
 	public static String customerId = config.getCustomerId();
+	public static String accountId = config.getAccountNo();
+	
 	
 	public static WebDriver driver;
 	public static Logger logger;

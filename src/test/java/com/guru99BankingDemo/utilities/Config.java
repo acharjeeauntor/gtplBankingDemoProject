@@ -35,6 +35,14 @@ public class Config {
 		out.close();
 	}
 	
+
+	public void setAccountId(String id) throws IOException {
+		FileOutputStream out = new FileOutputStream(src);
+		pro.setProperty("accountId",id);
+		pro.store(out, null);
+		out.close();
+	}
+	
 	
 	public String getChromePath() {
 		String chromePath  = pro.getProperty("chromepath");
@@ -74,6 +82,11 @@ public class Config {
 	public String getCustomerId() {
 		String cId  = pro.getProperty("customerId");
 		return cId;
+	}
+	
+	public String getAccountNo() {
+		String accountNo  = pro.getProperty("accountId");
+		return accountNo;
 	}
 	
 	

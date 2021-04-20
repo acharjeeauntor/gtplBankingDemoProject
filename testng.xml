@@ -10,8 +10,9 @@
   <test  name="BankingApp Test">
 <parameter name="browser" value="chrome"/>
     <classes>
-     <!-- <class name="com.guru99BankingDemo.testCases.ManagerModuleTest"/>-->
-             <class name="com.guru99BankingDemo.testCases.CustomerModuleTest"/>
+     <!-- <class name="com.guru99BankingDemo.testCases.ManagerModuleTest"/>
+             <class name="com.guru99BankingDemo.testCases.CustomerModuleTest"/>-->
+             <class name="com.guru99BankingDemo.testCases.AccountModuleTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -9,8 +9,11 @@ import org.testng.annotations.Test;
 
 import com.guru99BankingDemo.pageObjects.AccountOptionsPage;
 import com.guru99BankingDemo.pageObjects.DeleteAccountPage;
+import com.guru99BankingDemo.pageObjects.DepositPage;
 import com.guru99BankingDemo.pageObjects.EditAccountPage;
+import com.guru99BankingDemo.pageObjects.FundTransferPage;
 import com.guru99BankingDemo.pageObjects.NewAccountPage;
+import com.guru99BankingDemo.pageObjects.WithdrawalPage;
 import com.guru99BankingDemo.utilities.Config;
 import com.guru99BankingDemo.utilities.XLUtils;
 
@@ -18,10 +21,17 @@ public class AccountModuleTest extends BaseClass {
 
 	String accType = "Current";
 	String initialDeposit = "5000";
+	String amount = "100";
+	String description = "first Deposit";
+	String payeeaccount = "91680";
+	
 
 	NewAccountPage objNewAccount;
 	EditAccountPage objEditAccount;
 	DeleteAccountPage objDeleteAccount;
+	DepositPage objDeposit;
+	WithdrawalPage objWithdrawal;
+	FundTransferPage objFundTransfer;
 	AccountOptionsPage objAccountOptions;
 
 //	@Test(priority = 1,description = "Manager can add new Account using valid data")
@@ -265,46 +275,233 @@ public class AccountModuleTest extends BaseClass {
 //			Assert.assertTrue(false);
 //		}
 //	}
-	
-	
-	
-	@Test(priority = 13,dataProvider="EditDeleteAccountNoDataProvider",description = "Manager can't delete account using Invalid Account No")
-	public void deleteAccountUsingInvalidAccountNo(String accountId) throws InterruptedException, IOException {
 
-		objDeleteAccount = new DeleteAccountPage(driver);
+//	@Test(priority = 13,dataProvider="EditDeleteAccountNoDataProvider",description = "Manager can't delete account using Invalid Account No")
+//	public void deleteAccountUsingInvalidAccountNo(String accountId) throws InterruptedException, IOException {
+//
+//		objDeleteAccount = new DeleteAccountPage(driver);
+//		loginToTheApplication();
+//		objDeleteAccount.AddDeleteAccountNoForm(accountId);
+//
+//		if (driver.switchTo().alert().getText().contains("Please fill all fields")) {
+//			logger.info("Test Passed");
+//			driver.switchTo().alert().accept();
+//			Assert.assertTrue(true);
+//
+//		}else if(driver.switchTo().alert().getText().contains("Do you really want to delete this Account?")) {
+//			driver.switchTo().alert().accept();
+//			if(driver.switchTo().alert().getText().contains("Account Deleted Sucessfully")) {
+//				logger.warn("Test Failed");
+//				driver.switchTo().alert().accept();
+//				driver.switchTo().defaultContent();
+//				captureScreen(driver, "deleteAccountUsingInvalidAccountNo");
+//				Assert.assertTrue(false);
+//			}else {
+//				logger.info("Test Passed");
+//				driver.switchTo().alert().accept();
+//				Assert.assertTrue(true);
+//			}
+//		}
+//	}
+
+//	@Test(priority = 14, description = "Manager can deposit using valid data")
+//	public void depositUsingValidData() throws InterruptedException, IOException {
+//
+//		objDeposit = new DepositPage(driver);
+//		loginToTheApplication();
+//		objDeposit.submitDeposit(accountId, amount, description);
+//
+//		if (driver.getPageSource().contains("Transaction details of Deposit for Account " + accountId)) {
+//			logger.info("Test Passed");
+//			Assert.assertTrue(true);
+//
+//		} else {
+//			logger.warn("Test Failed");
+//			captureScreen(driver, "depositUsingValidData");
+//			Assert.assertTrue(false);
+//		}
+//
+//	}
+//	
+//	@Test(priority = 15, description = "Manager can reset deposit form")
+//	public void resetDepositForm() throws InterruptedException, IOException {
+//
+//		objDeposit = new DepositPage(driver);
+//		loginToTheApplication();
+//		objDeposit.resetDeposit(accountId, amount, description);
+//
+//		if (objDeposit.isAccountNoEmpty()) {
+//			logger.info("Test Passed");
+//			Assert.assertTrue(true);
+//
+//		} else {
+//			logger.warn("Test Failed");
+//			captureScreen(driver, "resetDepositForm");
+//			Assert.assertTrue(false);
+//		}
+//
+//	}
+
+	
+	
+//	@Test(priority = 16, dataProvider="DepositDataProvider",description = "Manager can't deposit using Invalid data")
+//	public void depositUsingInvalidData(String accountId,String amount,String description) throws InterruptedException, IOException {
+//
+//		objDeposit = new DepositPage(driver);
+//		loginToTheApplication();
+//		objDeposit.submitDeposit(accountId, amount, description);
+//
+//		if (isAlertPresent()) {
+//			logger.info("Test Passed");
+//			driver.switchTo().alert().accept();
+//			Assert.assertTrue(true);
+//
+//		} else if(driver.getPageSource().contains("Transaction details of Deposit for Account " + accountId)){
+//			logger.warn("Test Failed");
+//			captureScreen(driver, "depositUsingInvalidData");
+//			Assert.assertTrue(false);
+//		}
+//
+//	}
+	
+	
+	
+//	@Test(priority = 17, description = "Manager can withdrawal using valid data")
+//	public void withdrawalUsingValidData() throws InterruptedException, IOException {
+//
+//		objWithdrawal = new WithdrawalPage(driver);
+//		loginToTheApplication();
+//		objWithdrawal.submitWithdrawal(accountId, amount, description);
+//
+//		if (driver.getPageSource().contains("Transaction details of Withdrawal for Account " + accountId)) {
+//			logger.info("Test Passed");
+//			Assert.assertTrue(true);
+//
+//		} else {
+//			logger.warn("Test Failed");
+//			captureScreen(driver, "withdrawalUsingValidData");
+//			Assert.assertTrue(false);
+//		}
+//
+//	}
+//	
+//	@Test(priority = 18, description = "Manager can reset withdrawal form")
+//	public void resetWithdrawalForm() throws InterruptedException, IOException {
+//
+//		objWithdrawal = new WithdrawalPage(driver);
+//		loginToTheApplication();
+//		objWithdrawal.resetWithdrawal(accountId, amount, description);
+//
+//		if (objWithdrawal.isAccountNoEmpty()) {
+//			logger.info("Test Passed");
+//			Assert.assertTrue(true);
+//
+//		} else {
+//			logger.warn("Test Failed");
+//			captureScreen(driver, "resetWithdrawalForm");
+//			Assert.assertTrue(false);
+//		}
+//
+//	}
+//
+//	
+//	
+//	@Test(priority = 19, dataProvider="WithdrawalDataProvider",description = "Manager can't Withdrawal using Invalid data")
+//	public void withdrawalUsingInvalidData(String accountId,String amount,String description) throws InterruptedException, IOException {
+//
+//		objWithdrawal = new WithdrawalPage(driver);
+//		loginToTheApplication();
+//		objWithdrawal.submitWithdrawal(accountId, amount, description);
+//
+//		if (isAlertPresent()) {
+//			logger.info("Test Passed");
+//			driver.switchTo().alert().accept();
+//			Assert.assertTrue(true);
+//
+//		} else if(driver.getPageSource().contains("Transaction details of Withdrawal for Account " + accountId)){
+//			logger.warn("Test Failed");
+//			captureScreen(driver, "withdrawalUsingInvalidData");
+//			Assert.assertTrue(false);
+//		}
+//
+//	}
+	
+	
+	
+	
+	@Test(priority = 20, description = "Manager can Transfer Fund using valid data")
+	public void fundTransferUsingValidData() throws InterruptedException, IOException {
+
+		objFundTransfer = new FundTransferPage(driver);
 		loginToTheApplication();
-		objDeleteAccount.AddDeleteAccountNoForm(accountId);
-
-		if (driver.switchTo().alert().getText().contains("Please fill all fields")) {
+		objFundTransfer.submitFundTransfer(accountId, payeeaccount, amount, description);
+		Thread.sleep(2000);
+		
+		if (driver.getPageSource().contains("Fund Transfer Details")) {
 			logger.info("Test Passed");
-			driver.switchTo().alert().accept();
 			Assert.assertTrue(true);
 
-		}else if(driver.switchTo().alert().getText().contains("Do you really want to delete this Account?")) {
-			driver.switchTo().alert().accept();
-			if(driver.switchTo().alert().getText().contains("Account Deleted Sucessfully")) {
-				logger.warn("Test Failed");
-				driver.switchTo().alert().accept();
-				driver.switchTo().defaultContent();
-				captureScreen(driver, "deleteAccountUsingInvalidAccountNo");
-				Assert.assertTrue(false);
-			}else {
-				logger.info("Test Passed");
-				driver.switchTo().alert().accept();
-				Assert.assertTrue(true);
-			}
+		} else {
+			logger.warn("Test Failed");
+			captureScreen(driver, "fundTransferUsingValidData");
+			Assert.assertTrue(false);
 		}
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
+	}
+//	
+//	@Test(priority = 21, description = "Manager can reset Transfer Fund")
+//	public void resetFundTransferForm() throws InterruptedException, IOException {
+//
+//		objFundTransfer = new FundTransferPage(driver);
+//		loginToTheApplication();
+//		objFundTransfer.resetFundTransferForm(accountId, payeeaccount, amount, description);
+//
+//		if (objFundTransfer.isAccountNoEmpty()) {
+//			logger.info("Test Passed");
+//			Assert.assertTrue(true);
+//
+//		} else {
+//			logger.warn("Test Failed");
+//			captureScreen(driver, "resetFundTransferForm");
+//			Assert.assertTrue(false);
+//		}
+//
+//	}
+	
+	
+	
+	
+//	@Test(priority = 22, dataProvider="FundTransferDataProvider",description = "Manager can't Transfer Fund using Invalid data")
+//	public void fundTransferUsingInvalidData(String accountId, String payeeaccount, String amount, String description) throws InterruptedException, IOException {
+//
+//		objFundTransfer = new FundTransferPage(driver);
+//		loginToTheApplication();
+//		objFundTransfer.submitFundTransfer(accountId, payeeaccount, amount, description);
+//		
+//		if (isAlertPresent()) {
+//			logger.info("Test Passed");
+//			driver.switchTo().alert().accept();
+//			Assert.assertTrue(true);
+//
+//		} else if(driver.getPageSource().contains("Fund Transfer Details")){
+//			logger.warn("Test Failed");
+//			captureScreen(driver, "fundTransferUsingInvalidData");
+//			Assert.assertTrue(false);
+//		}
+//
+//	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	@DataProvider(name = "AddAccountDataProvider")
 	String[][] getAddAccountData() throws IOException {
 		String path = System.getProperty("user.dir")
@@ -335,6 +532,61 @@ public class AccountModuleTest extends BaseClass {
 		for (int i = 1; i <= rowNum; i++) {
 			for (int j = 0; j < colCount; j++) {
 				customerData[i - 1][j] = XLUtils.getCellData(path, "EditDeleteAccountNoData", i, j);
+			}
+
+		}
+		return customerData;
+	}
+	
+	@DataProvider(name = "WithdrawalDataProvider")
+	String[][] getWithdrawalData() throws IOException {
+		String path = System.getProperty("user.dir")
+				+ "/src/test/java/com/guru99BankingDemo/testData/AccountModuleData.xlsx";
+
+		int rowNum = XLUtils.getRowCount(path, "WithdrawalData");
+		int colCount = XLUtils.getCellCount(path, "WithdrawalData", 1);
+		String customerData[][] = new String[rowNum][colCount];
+
+		for (int i = 1; i <= rowNum; i++) {
+			for (int j = 0; j < colCount; j++) {
+				customerData[i - 1][j] = XLUtils.getCellData(path, "WithdrawalData", i, j);
+			}
+
+		}
+		return customerData;
+	}
+	
+	
+	@DataProvider(name = "DepositDataProvider")
+	String[][] getDepositData() throws IOException {
+		String path = System.getProperty("user.dir")
+				+ "/src/test/java/com/guru99BankingDemo/testData/AccountModuleData.xlsx";
+
+		int rowNum = XLUtils.getRowCount(path, "DepositData");
+		int colCount = XLUtils.getCellCount(path, "DepositData", 1);
+		String customerData[][] = new String[rowNum][colCount];
+
+		for (int i = 1; i <= rowNum; i++) {
+			for (int j = 0; j < colCount; j++) {
+				customerData[i - 1][j] = XLUtils.getCellData(path, "DepositData", i, j);
+			}
+
+		}
+		return customerData;
+	}
+	
+	@DataProvider(name = "FundTransferDataProvider")
+	String[][] getFundTransferData() throws IOException {
+		String path = System.getProperty("user.dir")
+				+ "/src/test/java/com/guru99BankingDemo/testData/AccountModuleData.xlsx";
+
+		int rowNum = XLUtils.getRowCount(path, "FundTransferData");
+		int colCount = XLUtils.getCellCount(path, "FundTransferData", 1);
+		String customerData[][] = new String[rowNum][colCount];
+
+		for (int i = 1; i <= rowNum; i++) {
+			for (int j = 0; j < colCount; j++) {
+				customerData[i - 1][j] = XLUtils.getCellData(path, "FundTransferData", i, j);
 			}
 
 		}

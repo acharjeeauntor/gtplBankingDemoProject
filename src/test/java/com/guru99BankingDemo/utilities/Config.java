@@ -43,6 +43,12 @@ public class Config {
 		out.close();
 	}
 	
+	public void setNewManagerPass(String pass) throws IOException {
+		FileOutputStream out = new FileOutputStream(src);
+		pro.setProperty("managerPass",pass);
+		pro.store(out, null);
+		out.close();
+	}
 	
 	public String getChromePath() {
 		String chromePath  = pro.getProperty("chromepath");
@@ -74,10 +80,6 @@ public class Config {
 		return pass;
 	}
 	
-	public String getManagerEmail() {
-		String email  = pro.getProperty("managerEmail");
-		return email;
-	}
 	
 	public String getCustomerId() {
 		String cId  = pro.getProperty("customerId");

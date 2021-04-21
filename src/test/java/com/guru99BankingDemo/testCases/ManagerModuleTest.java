@@ -20,9 +20,9 @@ public class ManagerModuleTest extends BaseClass {
 
 	@Test(priority = 1, description = "Manager can Registration using Valid Data")
 	public void registerUsingValidEmail() throws IOException {
-		objManagerRegistration = new ManagerRegistrationPage(driver);
+	objManagerRegistration = new ManagerRegistrationPage(driver);
 		driver.get(baseUrl);
-		objManagerRegistration.ManagerRegistration(managerEmail);
+		objManagerRegistration.ManagerRegistration(randomestring()+"@gmail.com");
 		if (driver.getPageSource().contains("Access details to demo site.")) {
 			objManagerRegistration.setManagerInfo();
 			logger.info("Test passed");
@@ -75,15 +75,15 @@ public class ManagerModuleTest extends BaseClass {
 		driver.get(baseUrl);
 		objManagerLogin.ManagerLogin(uId, pass);
 		Thread.sleep(2000);
-		if (isAlertPresent() == true) {
+		if (isAlertPresent()) {
 			driver.switchTo().alert().accept();
 			driver.switchTo().defaultContent();
 			logger.info("Test passed");
 			Assert.assertTrue(true);
 
 		} else {
-			captureScreen(driver, "loginUsingInvalidData");
 			logger.warn("Test failed");
+			captureScreen(driver, "loginUsingInvalidData");
 			Assert.assertTrue(false);
 
 		}

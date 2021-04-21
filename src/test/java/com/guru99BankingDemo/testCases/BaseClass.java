@@ -24,7 +24,6 @@ public class BaseClass {
 	public static String baseUrl = config.getBaseUrl();
 	public static String userId = config.getUserId();
 	public static String password = config.getPassword();
-	public static String managerEmail = config.getManagerEmail();
 	public static String customerId = config.getCustomerId();
 	public static String accountId = config.getAccountNo();
 	
@@ -90,6 +89,7 @@ public class BaseClass {
 		String generatedString2 = RandomStringUtils.randomNumeric(6);
 		return (generatedString2);
 	}
+	
 	
 	public static void loginToTheApplication() throws InterruptedException, IOException {
 		ManagerLoginPage objManagerLogin = new ManagerLoginPage(driver);

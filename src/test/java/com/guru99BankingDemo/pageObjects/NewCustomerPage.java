@@ -2,7 +2,7 @@ package com.guru99BankingDemo.pageObjects;
 
 import java.io.IOException;
 
-import org.openqa.selenium.NoSuchElementException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

@@ -34,11 +34,10 @@ public class CustomerModuleTest extends BaseClass {
 	EditCustomerPage objEditCustomer;
 	DeleteCustomerPage objDeleteCustomer;
 	Config config;
-	
-	
+
 	/* Add New Customer Part */
 
-	@Test(priority = 1,description = "Manager can add new Customer using valid data")
+	@Test(priority = 1, description = "Manager can add new Customer using valid data")
 	public void addCustomerUsingValidData() throws InterruptedException, IOException {
 
 		objNewCustomer = new NewCustomerPage(driver);
@@ -62,7 +61,7 @@ public class CustomerModuleTest extends BaseClass {
 
 	}
 
-	@Test(priority = 2,dataProvider = "NewCustomerDataProvider", description = "Manager can Reset Customer Form")
+	@Test(priority = 2, dataProvider = "NewCustomerDataProvider", description = "Manager can Reset Customer Form")
 	public void resetCustomerForm(String name, String gender, String month, String day, String year, String address,
 			String city, String state, String pin, String mobile, String email, String password)
 			throws InterruptedException, IOException {
@@ -82,7 +81,7 @@ public class CustomerModuleTest extends BaseClass {
 
 	}
 
-	@Test(priority = 3,dataProvider = "NewCustomerDataProvider", description = "Manager can't add new Customer using valid data")
+	@Test(priority = 3, dataProvider = "NewCustomerDataProvider", description = "Manager can't add new Customer using valid data")
 	public void addCustomerUsingInvalidData(String name, String gender, String month, String day, String year,
 			String address, String city, String state, String pin, String mobile, String email, String password)
 			throws InterruptedException, IOException {
@@ -134,7 +133,7 @@ public class CustomerModuleTest extends BaseClass {
 		loginToTheApplication();
 		objEditCustomer.resetCustomer(customerId);
 		Thread.sleep(2000);
-		if (objEditCustomer.isCustomerIdFieldEmpty() == true) {
+		if (objEditCustomer.isCustomerIdFieldEmpty()) {
 			logger.info("Test Passed");
 			Assert.assertTrue(true);
 
@@ -192,18 +191,11 @@ public class CustomerModuleTest extends BaseClass {
 		objEditCustomer.editCustomer(customerId);
 		Thread.sleep(2000);
 
-		if (isAlertPresent() == false) {
-			logger.info("Test passed");
-			Assert.assertTrue(true);
-		} else if (driver.switchTo().alert().getText().contains("Please fill all fields")) {
+		if (isAlertPresent()) {
 			logger.info("Test passed");
 			driver.switchTo().alert().accept();
 			Assert.assertTrue(true);
-		} else if (driver.switchTo().alert().getText().contains("Customer does not exist!!")) {
-			logger.info("Test passed");
-			driver.switchTo().alert().accept();
-			Assert.assertTrue(true);
-		} else if (driver.getPageSource().contains("Edit Customer")) {
+		} else {
 			logger.warn("Test Failed");
 			captureScreen(driver, "editCustomerUsingInvalidId");
 			Assert.assertTrue(false);
@@ -233,15 +225,16 @@ public class CustomerModuleTest extends BaseClass {
 		loginToTheApplication();
 		objEditCustomer.editCustomerData(address, city, state, pin, mobile, email);
 		Thread.sleep(2000);
-		if (driver.getPageSource().contains("Customer details updated Successfully!!!")) {
-			logger.warn("Test Failed");
-			captureScreen(driver, "editCustomerUsingInvalidData");
-			Assert.assertTrue(false);
-		} else {
+
+		if (isAlertPresent()) {
 			logger.info("Test passed");
 			driver.switchTo().alert().accept();
 			driver.switchTo().defaultContent();
 			Assert.assertTrue(true);
+		} else {
+			logger.warn("Test Failed");
+			captureScreen(driver, "editCustomerUsingInvalidData");
+			Assert.assertTrue(false);
 		}
 
 	}
@@ -267,7 +260,7 @@ public class CustomerModuleTest extends BaseClass {
 
 	}
 
-	@Test(priority = 12,dataProvider = "EditDeleteCustomerDataProvider", description = "Manager can't delete Customer info using Invalid Customer Id")
+	@Test(priority = 12, dataProvider = "EditDeleteCustomerDataProvider", description = "Manager can't delete Customer info using Invalid Customer Id")
 	public void deleteCustomerUsingInvalidId(String customerId) throws InterruptedException, IOException {
 
 		objDeleteCustomer = new DeleteCustomerPage(driver);
@@ -298,13 +291,13 @@ public class CustomerModuleTest extends BaseClass {
 
 	}
 
-	@Test(priority = 13,description = "Manager can reset Delete Customer Form")
+	@Test(priority = 13, description = "Manager can reset Delete Customer Form")
 	public void resetDeleteCustomerForm() throws InterruptedException, IOException {
 
 		objDeleteCustomer = new DeleteCustomerPage(driver);
 		loginToTheApplication();
 		objDeleteCustomer.resetCustomer(customerId);
-		if (objDeleteCustomer.isCustomerIdFieldEmpty() == true) {
+		if (objDeleteCustomer.isCustomerIdFieldEmpty()) {
 			logger.info("Test passed");
 			Assert.assertTrue(true);
 		} else {

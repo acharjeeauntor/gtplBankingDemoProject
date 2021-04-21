@@ -2,6 +2,7 @@ package com.guru99BankingDemo.pageObjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -9,12 +10,12 @@ import org.openqa.selenium.support.PageFactory;
 import com.guru99BankingDemo.testCases.BaseClass;
 
 
-public class DeleteAccountPage extends BaseClass {
+public class MiniStatementPage extends BaseClass {
 	AccountOptionsPage objAccountOptions;
 
 	WebDriver ldriver;
 
-	public DeleteAccountPage(WebDriver driver) {
+	public MiniStatementPage(WebDriver driver) {
 		ldriver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -26,9 +27,9 @@ public class DeleteAccountPage extends BaseClass {
 	@FindBy(name = "res")
 	WebElement resetBtnElement;
 
-	public void AddDeleteAccountNoForm(String accountNo) {
+	public void submitMiniStatementForm(String accountNo) {
 		objAccountOptions = new AccountOptionsPage(ldriver);
-		objAccountOptions.deleteAccountOption();
+		objAccountOptions.balanceEnquiryOption();
 
 		if (accountNo.isEmpty()) {
 			submitBtnElement.click();
@@ -39,10 +40,10 @@ public class DeleteAccountPage extends BaseClass {
 
 	}
 
-	public void resetDeleteAccountNoForm(String accountNo) {
+	public void resetMiniStatementForm(String accountNo) {
 		objAccountOptions = new AccountOptionsPage(ldriver);
-		objAccountOptions.deleteAccountOption();
-
+		objAccountOptions.balanceEnquiryOption();
+		
 		accountNoElement.sendKeys(accountNo);
 		resetBtnElement.click();
 

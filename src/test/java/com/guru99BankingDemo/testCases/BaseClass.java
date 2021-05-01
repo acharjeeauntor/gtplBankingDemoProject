@@ -2,6 +2,9 @@ package com.guru99BankingDemo.testCases;
 
 import java.io.File;
 import java.io.IOException;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.config.OperatingSystem;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.log4j.Logger;
@@ -33,19 +36,19 @@ public class BaseClass {
 
 	@Parameters("browser")
 	@BeforeClass
-	public void setUp(String br) throws IOException {
+	public void appSetUp(String br) throws IOException {
 		logger = Logger.getLogger("ebanking");
-		PropertyConfigurator.configure("Log4j.properties");
+		PropertyConfigurator.configure("log4j.properties");
 
 		if (br.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", config.getChromePath());
+			WebDriverManager.chromedriver().operatingSystem(OperatingSystem.LINUX).setup();
 			driver = new ChromeDriver();
 
 		} else if (br.equals("firefox")) {
-			System.setProperty("webdriver.gecko.driver", config.getFirefoxPath());
+			WebDriverManager.firefoxdriver().operatingSystem(OperatingSystem.LINUX).setup();
 			driver = new FirefoxDriver();
 		}else if(br.equals("ie")) {
-			System.setProperty("webdriver.ie.driver", config.getIePath());
+			WebDriverManager.iedriver().operatingSystem(OperatingSystem.LINUX).setup();
 			driver = new InternetExplorerDriver();
 		}
 		driver.manage().window().maximize();

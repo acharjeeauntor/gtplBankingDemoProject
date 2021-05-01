@@ -49,22 +49,6 @@ public class Config {
 		pro.store(out, null);
 		out.close();
 	}
-	
-	public String getChromePath() {
-		String chromePath  = pro.getProperty("chromepath");
-		return chromePath;
-	}
-	
-	public String getFirefoxPath() {
-		String firefoxPath  = pro.getProperty("firefoxpath");
-		return firefoxPath;
-	}
-	
-	public String getIePath() {
-		String iePath  = pro.getProperty("iepath");
-		return iePath;
-	}
-	
 	public String getBaseUrl() {
 		String url  = pro.getProperty("baseUrl");
 		return url;

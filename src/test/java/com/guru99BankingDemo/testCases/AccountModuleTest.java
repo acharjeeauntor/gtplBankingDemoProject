@@ -730,13 +730,13 @@ public class AccountModuleTest extends BaseClass {
 	}
 
 	@DataProvider(name = "AddAccountDataProvider")
-	String[][] getAddAccountData() throws IOException {
+	Object[][] getAddAccountData() throws IOException {
 		String path = System.getProperty("user.dir")
 				+ "/src/test/java/com/guru99BankingDemo/testData/AccountModuleData.xlsx";
 
 		int rowNum = XLUtils.getRowCount(path, "AddAccountData");
 		int colCount = XLUtils.getCellCount(path, "AddAccountData", 1);
-		String customerData[][] = new String[rowNum][colCount];
+		Object[][] customerData = new Object[rowNum][colCount];
 
 		for (int i = 1; i <= rowNum; i++) {
 			for (int j = 0; j < colCount; j++) {
@@ -748,13 +748,13 @@ public class AccountModuleTest extends BaseClass {
 	}
 
 	@DataProvider(name = "EditDeleteEnquiryStatementDataProvider")
-	String[][] getEditAccountNoData() throws IOException {
+	Object[][] getEditAccountNoData() throws IOException {
 		String path = System.getProperty("user.dir")
 				+ "/src/test/java/com/guru99BankingDemo/testData/AccountModuleData.xlsx";
 
 		int rowNum = XLUtils.getRowCount(path, "EditDeleteEnquiryStatementData");
 		int colCount = XLUtils.getCellCount(path, "EditDeleteEnquiryStatementData", 1);
-		String customerData[][] = new String[rowNum][colCount];
+		Object[][] customerData = new Object[rowNum][colCount];
 
 		for (int i = 1; i <= rowNum; i++) {
 			for (int j = 0; j < colCount; j++) {
@@ -766,13 +766,13 @@ public class AccountModuleTest extends BaseClass {
 	}
 
 	@DataProvider(name = "WithdrawalDataProvider")
-	String[][] getWithdrawalData() throws IOException {
+	Object[][] getWithdrawalData() throws IOException {
 		String path = System.getProperty("user.dir")
 				+ "/src/test/java/com/guru99BankingDemo/testData/AccountModuleData.xlsx";
 
 		int rowNum = XLUtils.getRowCount(path, "WithdrawalData");
 		int colCount = XLUtils.getCellCount(path, "WithdrawalData", 1);
-		String customerData[][] = new String[rowNum][colCount];
+		Object[][] customerData= new Object[rowNum][colCount];
 
 		for (int i = 1; i <= rowNum; i++) {
 			for (int j = 0; j < colCount; j++) {
@@ -784,13 +784,13 @@ public class AccountModuleTest extends BaseClass {
 	}
 
 	@DataProvider(name = "DepositDataProvider")
-	String[][] getDepositData() throws IOException {
+	Object[][] getDepositData() throws IOException {
 		String path = System.getProperty("user.dir")
 				+ "/src/test/java/com/guru99BankingDemo/testData/AccountModuleData.xlsx";
 
 		int rowNum = XLUtils.getRowCount(path, "DepositData");
 		int colCount = XLUtils.getCellCount(path, "DepositData", 1);
-		String customerData[][] = new String[rowNum][colCount];
+		Object[][] customerData = new Object[rowNum][colCount];
 
 		for (int i = 1; i <= rowNum; i++) {
 			for (int j = 0; j < colCount; j++) {
@@ -802,13 +802,13 @@ public class AccountModuleTest extends BaseClass {
 	}
 
 	@DataProvider(name = "FundTransferDataProvider")
-	String[][] getFundTransferData() throws IOException {
+	Object[][] getFundTransferData() throws IOException {
 		String path = System.getProperty("user.dir")
 				+ "/src/test/java/com/guru99BankingDemo/testData/AccountModuleData.xlsx";
 
 		int rowNum = XLUtils.getRowCount(path, "FundTransferData");
 		int colCount = XLUtils.getCellCount(path, "FundTransferData", 1);
-		String customerData[][] = new String[rowNum][colCount];
+		Object[][] customerData= new Object[rowNum][colCount];
 
 		for (int i = 1; i <= rowNum; i++) {
 			for (int j = 0; j < colCount; j++) {
@@ -820,13 +820,13 @@ public class AccountModuleTest extends BaseClass {
 	}
 
 	@DataProvider(name = "ChangePasswordDataProvider")
-	String[][] getChangePasswordData() throws IOException {
+	Object[][] getChangePasswordData() throws IOException {
 		String path = System.getProperty("user.dir")
 				+ "/src/test/java/com/guru99BankingDemo/testData/AccountModuleData.xlsx";
 
 		int rowNum = XLUtils.getRowCount(path, "ChangePasswordData");
 		int colCount = XLUtils.getCellCount(path, "ChangePasswordData", 1);
-		String customerData[][] = new String[rowNum][colCount];
+		Object[][] customerData= new Object[rowNum][colCount];
 
 		for (int i = 1; i <= rowNum; i++) {
 			for (int j = 0; j < colCount; j++) {
@@ -838,13 +838,13 @@ public class AccountModuleTest extends BaseClass {
 	}
 
 	@DataProvider(name = "CustomisedStatementDataProvider")
-	String[][] getCustomisedStatementData() throws IOException {
+	Object[][] getCustomisedStatementData() throws IOException {
 		String path = System.getProperty("user.dir")
 				+ "/src/test/java/com/guru99BankingDemo/testData/AccountModuleData.xlsx";
 
 		int rowNum = XLUtils.getRowCount(path, "CustomisedStatementData");
 		int colCount = XLUtils.getCellCount(path, "CustomisedStatementData", 1);
-		String customerData[][] = new String[rowNum][colCount];
+		Object[][] customerData = new Object[rowNum][colCount];
 
 		for (int i = 1; i <= rowNum; i++) {
 			for (int j = 0; j < colCount; j++) {

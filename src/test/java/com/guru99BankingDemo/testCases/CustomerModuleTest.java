@@ -309,13 +309,13 @@ public class CustomerModuleTest extends BaseClass {
 	}
 
 	@DataProvider(name = "NewCustomerDataProvider")
-	String[][] getNewCustomerData() throws IOException {
+	Object[][] getNewCustomerData() throws IOException {
 		String path = System.getProperty("user.dir")
 				+ "/src/test/java/com/guru99BankingDemo/testData/CustomerModuleData.xlsx";
 
 		int rowNum = XLUtils.getRowCount(path, "NewCustomerData");
 		int colCount = XLUtils.getCellCount(path, "NewCustomerData", 1);
-		String customerData[][] = new String[rowNum][colCount];
+		Object[][] customerData = new Object[rowNum][colCount];
 
 		for (int i = 1; i <= rowNum; i++) {
 			for (int j = 0; j < colCount; j++) {
@@ -327,13 +327,13 @@ public class CustomerModuleTest extends BaseClass {
 	}
 
 	@DataProvider(name = "EditDeleteCustomerDataProvider")
-	String[][] getDeleteCustomerData() throws IOException {
+	Object[][] getDeleteCustomerData() throws IOException {
 		String path = System.getProperty("user.dir")
 				+ "/src/test/java/com/guru99BankingDemo/testData/CustomerModuleData.xlsx";
 
 		int rowNum = XLUtils.getRowCount(path, "EditDeleteCustomerIdData");
 		int colCount = XLUtils.getCellCount(path, "EditDeleteCustomerIdData", 1);
-		String customerData[][] = new String[rowNum][colCount];
+		Object[][] customerData= new Object[rowNum][colCount];
 
 		for (int i = 1; i <= rowNum; i++) {
 			for (int j = 0; j < colCount; j++) {
@@ -345,13 +345,13 @@ public class CustomerModuleTest extends BaseClass {
 	}
 
 	@DataProvider(name = "EditCustomerDataProvider")
-	String[][] getEditCustomerIdData() throws IOException {
+	Object[][] getEditCustomerIdData() throws IOException {
 		String path = System.getProperty("user.dir")
 				+ "/src/test/java/com/guru99BankingDemo/testData/CustomerModuleData.xlsx";
 
 		int rowNum = XLUtils.getRowCount(path, "EditCustomerData");
 		int colCount = XLUtils.getCellCount(path, "EditCustomerData", 1);
-		String customerData[][] = new String[rowNum][colCount];
+		Object[][] customerData = new Object[rowNum][colCount];
 
 		for (int i = 1; i <= rowNum; i++) {
 			for (int j = 0; j < colCount; j++) {

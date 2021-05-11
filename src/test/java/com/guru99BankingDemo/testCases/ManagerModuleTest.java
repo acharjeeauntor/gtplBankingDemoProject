@@ -108,13 +108,13 @@ public class ManagerModuleTest extends BaseClass {
 	}
 
 	@DataProvider(name = "RegistrationManagerData")
-	String[][] getRegistrationManagerData() throws IOException {
+	Object[][] getRegistrationManagerData() throws IOException {
 		String path = System.getProperty("user.dir")
 				+ "/src/test/java/com/guru99BankingDemo/testData/ManagerModuleData.xlsx";
 
 		int rowNum = XLUtils.getRowCount(path, "ManagerRegistrationData");
 		int colCount = XLUtils.getCellCount(path, "ManagerRegistrationData", 1);
-		String registrationData[][] = new String[rowNum][colCount];
+		Object[][] registrationData = new Object[rowNum][colCount];
 
 		for (int i = 1; i <= rowNum; i++) {
 			for (int j = 0; j < colCount; j++) {
@@ -126,13 +126,13 @@ public class ManagerModuleTest extends BaseClass {
 	}
 
 	@DataProvider(name = "LoginManagerData")
-	String[][] getLoginManagerData() throws IOException {
+	Object[][] getLoginManagerData() throws IOException {
 		String path = System.getProperty("user.dir")
 				+ "/src/test/java/com/guru99BankingDemo/testData/ManagerModuleData.xlsx";
 
 		int rowNum = XLUtils.getRowCount(path, "ManagerLoginData");
 		int colCount = XLUtils.getCellCount(path, "ManagerLoginData", 1);
-		String loginData[][] = new String[rowNum][colCount];
+		Object[][] loginData = new Object[rowNum][colCount];
 
 		for (int i = 1; i <= rowNum; i++) {
 			for (int j = 0; j < colCount; j++) {

@@ -97,7 +97,7 @@ public class BaseClass {
 	public static void loginToTheApplication() throws InterruptedException, IOException {
 		ManagerLoginPage objManagerLogin = new ManagerLoginPage(driver);
 		driver.get(baseUrl);
-		objManagerLogin.ManagerLogin(userId, password);
+		objManagerLogin.ManagerLogin                                                                                                                                        (userId, password);
 
 	}
 	

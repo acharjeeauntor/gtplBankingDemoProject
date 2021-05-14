@@ -12,7 +12,7 @@ Framework: TestNG,Data Driven Framework(DDF) <br>
 Report: Extent<br>
 Project Structure: Page object Model(POM)<br>
 Dependency Used:apache poi,extentreports,log4j,testng,selenium-java,etc<br>
-IDE: Eclipse<br>
+IDE: Intellij<br>
 
 --------------------------------------------------
 

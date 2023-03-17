@@ -1,5 +1,13 @@
 package com.guru99BankingDemo.testCases;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.io.IOException;
 
 import org.testng.Assert;
@@ -18,19 +26,19 @@ public class ManagerModuleTest extends BaseClass {
 	AccountOptionsPage objAccountOptions;
 	String welcomeMessage = "Welcome To Manager's Page of Guru99 Bank";
 
-	@Test(priority = 1, description = "Manager can Registration using Valid Data")
+	@Test(priority = 1, description = "Manager can Registration using Valid Data",groups= {"Sanity"})
 	public void registerUsingValidEmail() throws IOException {
 	objManagerRegistration = new ManagerRegistrationPage(driver);
 		driver.get(baseUrl);
 		objManagerRegistration.ManagerRegistration(randomestring()+"@gmail.com");
 		if (driver.getPageSource().contains("Access details to demo site.")) {
 			objManagerRegistration.setManagerInfo();
-			logger.info("Test passed");
-			Assert.assertTrue(true);
+			
+			AssertJUnit.assertTrue(true);
 		} else {
 			captureScreen(driver, "registerUsingValidEmail");
-			logger.warn("Test failed");
-			Assert.assertTrue(false);
+			
+			AssertJUnit.assertTrue(false);
 		}
 	}
 
@@ -40,30 +48,30 @@ public class ManagerModuleTest extends BaseClass {
 		driver.get(baseUrl);
 		objManagerRegistration.ManagerRegistration(email);
 		if (driver.getPageSource().contains("Access details to demo site.")) {
-			logger.warn("Test failed");
+			
 			captureScreen(driver, "registerUsingInvalidEmail");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		} else {
-			logger.info("Test passed");
-			Assert.assertTrue(true);
+			
+			AssertJUnit.assertTrue(true);
 		}
 	}
 
-	@Test(priority = 3, description = "Manager can Login Account using Valid UserId and Password")
+	@Test(priority = 3, description = "Manager can Login Account using Valid UserId and Password",groups= {"Sanity"})
 	public void loginUsingValidData() throws IOException, InterruptedException {
 		objManagerLogin = new ManagerLoginPage(driver);
 		driver.get(baseUrl);
 		objManagerLogin.ManagerLogin(userId, password);
 		Thread.sleep(2000);
 		if (driver.getPageSource().contains(welcomeMessage)) {
-			logger.info("Test passed");
-			Assert.assertTrue(true);
+			
+			AssertJUnit.assertTrue(true);
 		} else {
 			driver.switchTo().alert().accept();
 			driver.switchTo().defaultContent();
 			captureScreen(driver, "loginUsingValidData");
-			logger.warn("Test failed");
-			Assert.assertTrue(false);
+			
+			AssertJUnit.assertTrue(false);
 
 		}
 
@@ -78,13 +86,13 @@ public class ManagerModuleTest extends BaseClass {
 		if (isAlertPresent()) {
 			driver.switchTo().alert().accept();
 			driver.switchTo().defaultContent();
-			logger.info("Test passed");
-			Assert.assertTrue(true);
+			
+			AssertJUnit.assertTrue(true);
 
 		} else {
-			logger.warn("Test failed");
+			
 			captureScreen(driver, "loginUsingInvalidData");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 
 		}
 
@@ -97,13 +105,13 @@ public class ManagerModuleTest extends BaseClass {
 		Thread.sleep(2000);
 		objAccountOptions.ManagerLogoutOption();
 		if (driver.switchTo().alert().getText().contains("You Have Succesfully Logged Out!!")) {
-			Assert.assertTrue(true);
-			logger.info("Test passed");
+			AssertJUnit.assertTrue(true);
+			
 			driver.switchTo().alert().accept();
 		} else {
-			logger.warn("Test Failed");
+			
 			captureScreen(driver, "managerAccountLogout");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 	}
 

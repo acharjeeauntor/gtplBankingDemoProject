@@ -1,21 +1,24 @@
 package com.guru99BankingDemo.testCases;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterMethod;
 import java.io.File;
 import java.io.IOException;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import io.github.bonigarcia.wdm.config.OperatingSystem;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.RandomStringUtils;
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.safari.SafariOptions;
 import org.testng.annotations.*;
 
 import com.guru99BankingDemo.pageObjects.ManagerLoginPage;
@@ -32,27 +35,41 @@ public class BaseClass {
 	
 	
 	public static WebDriver driver;
-	public static Logger logger;
 
-	@Parameters("browser")
+    @Parameters({"browser","Headless"})
 	@BeforeClass
-	public void appSetUp(String br) throws IOException {
-		logger = Logger.getLogger("ebanking");
-		PropertyConfigurator.configure("log4j.properties");
+	public void appSetUp(String br,String mode) throws IOException {
 
 		if (br.equals("chrome")) {
-			WebDriverManager.chromedriver().operatingSystem(OperatingSystem.LINUX).setup();
-			driver = new ChromeDriver();
-
+			if(mode.equals("true")) {
+				ChromeOptions options = new ChromeOptions();
+				options.setHeadless(true);
+				options.addArguments("--remote-allow-origins=*");
+				driver = new ChromeDriver(options);
+			}else {
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("--remote-allow-origins=*");
+				driver = new ChromeDriver(options);
+			}
+			
 		} else if (br.equals("firefox")) {
-			WebDriverManager.firefoxdriver().operatingSystem(OperatingSystem.LINUX).setup();
-			driver = new FirefoxDriver();
-		}else if(br.equals("ie")) {
-			WebDriverManager.iedriver().operatingSystem(OperatingSystem.LINUX).setup();
-			driver = new InternetExplorerDriver();
+			if(mode.equals("true")) {
+				FirefoxOptions options = new FirefoxOptions();
+				options.setHeadless(true);
+				driver = new FirefoxDriver(options);
+			}else {
+				driver = new FirefoxDriver();
+			}
+		
+		}else if(br.equals("safari")) {
+			//SafariOptions options = new SafariOptions();
+			 driver = new SafariDriver();
 		}
+		
+		
 		driver.manage().window().maximize();
 	}
+
 
 	@AfterClass
 	public void tearDown() {
@@ -97,7 +114,7 @@ public class BaseClass {
 	public static void loginToTheApplication() throws InterruptedException, IOException {
 		ManagerLoginPage objManagerLogin = new ManagerLoginPage(driver);
 		driver.get(baseUrl);
-		objManagerLogin.ManagerLogin                                                                                                                                        (userId, password);
+		objManagerLogin.ManagerLogin(userId,password);                                                                                                                                      
 
 	}
 	

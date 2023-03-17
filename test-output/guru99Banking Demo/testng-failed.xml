@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [guru99Banking Demo]" guice-stage="DEVELOPMENT">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [guru99Banking Demo]">
   <listeners>
     <listener class-name="com.guru99BankingDemo.utilities.Reporting"/>
   </listeners>
@@ -9,9 +9,21 @@
     <classes>
       <class name="com.guru99BankingDemo.testCases.CustomerModuleTest">
         <methods>
-          <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="editCustomerUsingInvalidId"/>
+          <include name="nameGenderBirthDateEditable"/>
+          <include name="editCustomerUsingValidId"/>
+          <include name="deleteCustomerUsingValidId"/>
+          <include name="resetEditCustomerIdForm"/>
+          <include name="resetCustomerForm"/>
+          <include name="resetDeleteCustomerForm"/>
+          <include name="editCustomerUsingValidData"/>
+          <include name="editCustomerUsingInvalidData"/>
+          <include name="addCustomerUsingValidData"/>
+          <include name="resetCustomerDataForm"/>
           <include name="deleteCustomerUsingInvalidId"/>
+          <include name="appSetUp"/>
+          <include name="addCustomerUsingInvalidData"/>
         </methods>
       </class> <!-- com.guru99BankingDemo.testCases.CustomerModuleTest -->
     </classes>

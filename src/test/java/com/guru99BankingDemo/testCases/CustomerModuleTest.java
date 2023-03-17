@@ -1,5 +1,13 @@
 package com.guru99BankingDemo.testCases;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
@@ -37,7 +45,7 @@ public class CustomerModuleTest extends BaseClass {
 
 	/* Add New Customer Part */
 
-	@Test(priority = 1, description = "Manager can add new Customer using valid data")
+	@Test(priority = 1, description = "Manager can add new Customer using valid data",groups= {"Sanity"})
 	public void addCustomerUsingValidData() throws InterruptedException, IOException {
 
 		objNewCustomer = new NewCustomerPage(driver);
@@ -48,15 +56,15 @@ public class CustomerModuleTest extends BaseClass {
 				password);
 		Thread.sleep(2000);
 		if (driver.getPageSource().contains(AddCustomerSuccessMessage)) {
-			logger.info("Test Passed");
+			
 			config.setCustomerId(driver.findElement(By.xpath("//tbody/tr[4]/td[2]")).getText());
-			Assert.assertTrue(true);
+			AssertJUnit.assertTrue(true);
 		} else {
-			logger.warn("Test Failed");
+			
 			driver.switchTo().alert().accept();
 			driver.switchTo().defaultContent();
 			captureScreen(driver, "addCustomerUsingValidData");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -71,12 +79,12 @@ public class CustomerModuleTest extends BaseClass {
 				password);
 		Thread.sleep(2000);
 		if (objNewCustomer.isCustomerNameEmpty()) {
-			logger.info("Test passed");
-			Assert.assertTrue(true);
+			
+			AssertJUnit.assertTrue(true);
 		} else {
-			logger.warn("Test Failed");
+			
 			captureScreen(driver, "resetCustomerForm");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -92,37 +100,37 @@ public class CustomerModuleTest extends BaseClass {
 				password);
 		Thread.sleep(2000);
 		if (isAlertPresent() == true) {
-			logger.info("Test Passed");
+			
 			driver.switchTo().alert().accept();
 			driver.switchTo().defaultContent();
-			Assert.assertTrue(true);
+			AssertJUnit.assertTrue(true);
 
 		} else {
-			logger.warn("Test Failed");
+			
 			captureScreen(driver, "addCustomerUsingInvalidData");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
 
 	/* Edit Customer Part */
 
-	@Test(priority = 4, description = "Manager can edit Customer using valid Customer Id")
+	@Test(priority = 4, description = "Manager can edit Customer using valid Customer Id",groups= {"Sanity"})
 	public void editCustomerUsingValidId() throws InterruptedException, IOException {
 		objEditCustomer = new EditCustomerPage(driver);
 		loginToTheApplication();
 		objEditCustomer.editCustomer(customerId);
 		Thread.sleep(2000);
 		if (driver.getPageSource().contains("Edit Customer")) {
-			logger.info("Test Passed");
-			Assert.assertTrue(true);
+			
+			AssertJUnit.assertTrue(true);
 
 		} else {
-			logger.warn("Test Failed");
+			
 			driver.switchTo().alert().accept();
 			driver.switchTo().defaultContent();
 			captureScreen(driver, "editCustomerUsingValidId");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -134,13 +142,13 @@ public class CustomerModuleTest extends BaseClass {
 		objEditCustomer.resetCustomer(customerId);
 		Thread.sleep(2000);
 		if (objEditCustomer.isCustomerIdFieldEmpty()) {
-			logger.info("Test Passed");
-			Assert.assertTrue(true);
+			
+			AssertJUnit.assertTrue(true);
 
 		} else {
-			logger.warn("Test Failed");
+			
 			captureScreen(driver, "resetEditCustomerForm");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -152,15 +160,15 @@ public class CustomerModuleTest extends BaseClass {
 		objEditCustomer.editCustomerData(address, city, state, pin, mobile, email);
 		Thread.sleep(2000);
 		if (driver.getPageSource().contains("Customer details updated Successfully!!!")) {
-			logger.info("Test Passed");
-			Assert.assertTrue(true);
+			
+			AssertJUnit.assertTrue(true);
 
 		} else {
-			logger.warn("Test Failed");
+			
 			driver.switchTo().alert().accept();
 			driver.switchTo().defaultContent();
 			captureScreen(driver, "editCustomerUsingValidData");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -172,13 +180,13 @@ public class CustomerModuleTest extends BaseClass {
 		objEditCustomer.resetCustomerData(address, city, state, pin, mobile, email);
 		Thread.sleep(2000);
 		if (driver.getPageSource().contains("Customer details updated Successfully!!!")) {
-			logger.warn("Test failed");
+			
 			captureScreen(driver, "resetCustomerDataForm");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 
 		} else {
-			logger.info("Test passed");
-			Assert.assertTrue(true);
+			
+			AssertJUnit.assertTrue(true);
 		}
 
 	}
@@ -192,28 +200,28 @@ public class CustomerModuleTest extends BaseClass {
 		Thread.sleep(2000);
 
 		if (isAlertPresent()) {
-			logger.info("Test passed");
+			
 			driver.switchTo().alert().accept();
-			Assert.assertTrue(true);
+			AssertJUnit.assertTrue(true);
 		} else {
-			logger.warn("Test Failed");
+			
 			captureScreen(driver, "editCustomerUsingInvalidId");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
 
-	@Test(priority = 9, description = "Manager can't edit Customer Name,Gender,Date Of Birth")
+	@Test(priority = 9, description = "Manager can't edit Customer Name,Gender,Date Of Birth",groups= {"Sanity"})
 	public void nameGenderBirthDateEditable() throws InterruptedException, IOException {
 		objEditCustomer = new EditCustomerPage(driver);
 		loginToTheApplication();
 		if (objEditCustomer.isNameGenderBithDateEditable() == false) {
-			logger.info("Test passed");
-			Assert.assertTrue(true);
+		
+			AssertJUnit.assertTrue(true);
 		} else {
-			logger.warn("Test Failed");
+			
 			captureScreen(driver, "nameGenderBirthDateEditable");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 	}
 
@@ -227,14 +235,14 @@ public class CustomerModuleTest extends BaseClass {
 		Thread.sleep(2000);
 
 		if (isAlertPresent()) {
-			logger.info("Test passed");
+	
 			driver.switchTo().alert().accept();
 			driver.switchTo().defaultContent();
-			Assert.assertTrue(true);
+			AssertJUnit.assertTrue(true);
 		} else {
-			logger.warn("Test Failed");
+		
 			captureScreen(driver, "editCustomerUsingInvalidData");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -249,13 +257,13 @@ public class CustomerModuleTest extends BaseClass {
 		objDeleteCustomer.deleteCustomer(customerId);
 		driver.switchTo().alert().accept();
 		if (driver.switchTo().alert().getText().contains("Customer deleted Successfully")) {
-			logger.info("Test passed");
+			
 			driver.switchTo().alert().accept();
-			Assert.assertTrue(true);
+			AssertJUnit.assertTrue(true);
 		} else {
-			logger.warn("Test Failed");
+			
 			captureScreen(driver, "deleteCustomerUsingValidId");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -269,22 +277,22 @@ public class CustomerModuleTest extends BaseClass {
 		Thread.sleep(2000);
 
 		if (isAlertPresent() == false) {
-			logger.info("Test passed");
-			Assert.assertTrue(true);
+			
+			AssertJUnit.assertTrue(true);
 		} else if (driver.switchTo().alert().getText().contains("Please fill all fields")) {
-			logger.info("Test passed");
+			
 			driver.switchTo().alert().accept();
-			Assert.assertTrue(true);
+			AssertJUnit.assertTrue(true);
 		} else if (driver.switchTo().alert().getText().contains("Do you really want to delete this Customer?")) {
 			driver.switchTo().alert().accept();
 			if (driver.switchTo().alert().getText().contains("Customer does not exist!!")) {
-				logger.info("Test passed");
+				
 				driver.switchTo().alert().accept();
-				Assert.assertTrue(true);
+				AssertJUnit.assertTrue(true);
 			} else if (driver.switchTo().alert().getText().contains("Customer deleted Successfully")) {
-				logger.warn("Test Failed");
+				
 				captureScreen(driver, "deleteCustomerUsingInvalidId");
-				Assert.assertTrue(false);
+				AssertJUnit.assertTrue(false);
 			}
 
 		}
@@ -298,12 +306,12 @@ public class CustomerModuleTest extends BaseClass {
 		loginToTheApplication();
 		objDeleteCustomer.resetCustomer(customerId);
 		if (objDeleteCustomer.isCustomerIdFieldEmpty()) {
-			logger.info("Test passed");
-			Assert.assertTrue(true);
+			
+			AssertJUnit.assertTrue(true);
 		} else {
-			logger.warn("Test Failed");
+		
 			captureScreen(driver, "resetDeleteCustomerForm");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}

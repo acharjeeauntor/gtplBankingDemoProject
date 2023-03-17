@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Master Test Suite">
+		<listeners>
+		<listener
+			class-name="com.guru99BankingDemo.utilities.Reporting" />
+	</listeners>
+	
+	<suite-files>
+		<suite-file path="./sanity_testng.xml"></suite-file>
+		<suite-file path="./regression_testng.xml"></suite-file>
+		<suite-file path="./parallal_testng.xml"></suite-file>
+	</suite-files>
+</suite> <!-- Master Suite -->

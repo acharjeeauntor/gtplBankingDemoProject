@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>BankingApp Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/45</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Apr 18 22:29:44 BDT 2021</td>
+<td>Started on:</td><td>Fri Mar 17 18:50:24 BDT 2023</td>
 </tr>
-<tr><td>Total time:</td><td>8 seconds (8644 ms)</td>
+<tr><td>Total time:</td><td>9 seconds (9904 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,34 +67,31 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.deleteCustomerUsingInvalidId()'><b>deleteCustomerUsingInvalidId</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can't delete Customer info using Invalid Customer Id</td>
-<td><div><pre>java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFSheet.getLastRowNum()&quot; because &quot;com.guru99BankingDemo.utilities.XLUtils.ws&quot; is null
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFSheet.getLastRowNum()&quot; because &quot;com.guru99BankingDemo.utilities.XLUtils.ws&quot; is null
-	at com.guru99BankingDemo.utilities.XLUtils.getRowCount(XLUtils.java:25)
-	at com.guru99BankingDemo.testCases.CustomerModuleTest.getDeleteCustomerData(CustomerModuleTest.java:187)
-	... 25 more
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace844872102", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace844872102'><pre>java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFSheet.getLastRowNum()&quot; because &quot;com.guru99BankingDemo.utilities.XLUtils.ws&quot; is null
-	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:49)
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:145)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:797)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
-	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
-	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:789)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.appSetUp()'><b>appSetUp</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace112466394", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace112466394'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
 	at org.testng.TestRunner.privateRun(TestRunner.java:764)
 	at org.testng.TestRunner.run(TestRunner.java:585)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
@@ -110,20 +107,1875 @@ Caused by: java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xs
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFSheet.getLastRowNum()&quot; because &quot;com.guru99BankingDemo.utilities.XLUtils.ws&quot; is null
-	at com.guru99BankingDemo.utilities.XLUtils.getRowCount(XLUtils.java:25)
-	at com.guru99BankingDemo.testCases.CustomerModuleTest.getDeleteCustomerData(CustomerModuleTest.java:187)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:76)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
-	... 25 more
+</pre></div></td>
+<td>-1679057424</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057424</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057431</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057431</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057431</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057431</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057431</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057431</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057431</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057431</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057431</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057433</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057433</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057433</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057433</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057433</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057433</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057433</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057433</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057433</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057433</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057433</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057433</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057433</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057433</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057433</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057433</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057433</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057433</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057434</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057434</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057434</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057434</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057434</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057434</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057434</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057434</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057434</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057434</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057434</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057434</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057434</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057434</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057434</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057434</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057434</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.tearDown()'><b>tearDown</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest</td>
+<td></td>
+<td>-1679057434</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.addCustomerUsingInvalidData()'><b>addCustomerUsingInvalidData</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can't add new Customer using valid data<br>Parameters: , , , , , , , , , , , </td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace259319861", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace259319861'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>com.guru99BankingDemo.testCases.CustomerModuleTest@363ee3a2</td></tr>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.addCustomerUsingInvalidData()'><b>addCustomerUsingInvalidData</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can't add new Customer using valid data<br>Parameters: Auntor, male, 11, 22, 1998, pathrail, Tangail, dhaka, 12123, 1795486253, achar@gmail.com, 12345##abc</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1059634518", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1059634518'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.addCustomerUsingInvalidData()'><b>addCustomerUsingInvalidData</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can't add new Customer using valid data<br>Parameters: Auntor, male, 11, 22, 1998, pathrail, Tangail, dhaka, 1212345, 1795486253, achar@gmail.com, 12345##abc</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace436094532", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace436094532'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.addCustomerUsingInvalidData()'><b>addCustomerUsingInvalidData</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can't add new Customer using valid data<br>Parameters: ABC, female, 11, 22, 1998, pathrail, Tangail, dhaka, abcde, 1795486253, achar@gmail.com, 12345##abc</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1541433310", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1541433310'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.addCustomerUsingInvalidData()'><b>addCustomerUsingInvalidData</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can't add new Customer using valid data<br>Parameters: Auntor, male, 11, 22, 1998, pathrail, Tangail, dhaka, 191212, sdigdskjidk, achar@gmail.com, 12345##abc</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace405036720", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace405036720'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.addCustomerUsingInvalidData()'><b>addCustomerUsingInvalidData</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can't add new Customer using valid data<br>Parameters: Auntor, male, 11, 22, 1998, pathrail, Tangail, 123456, 191212, 1795486253, achar@gmail.com, 12345##abc</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace620456576", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace620456576'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.addCustomerUsingInvalidData()'><b>addCustomerUsingInvalidData</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can't add new Customer using valid data<br>Parameters: 522, male, 11, 22, 1998, pathrail, Tangail, dhaka, 191212, 1795486253, achar@gmail.com, 12345##abc</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1923634801", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1923634801'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.addCustomerUsingInvalidData()'><b>addCustomerUsingInvalidData</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can't add new Customer using valid data<br>Parameters: grfg, female, 11, 22, 1998, pathrail, 123456, dhaka, 191212, 1795486253, achar@gmail.com, 12345##abc</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace418513504", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace418513504'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.addCustomerUsingInvalidData()'><b>addCustomerUsingInvalidData</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can't add new Customer using valid data<br>Parameters: Auntor, male, 11, 22, 1998, pathrail, Tangail, dhaka, 191212, 1795486253, 4445@45#dfg, 12345##abc</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2051598050", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2051598050'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.addCustomerUsingValidData()'><b>addCustomerUsingValidData</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can add new Customer using valid data</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace331418503", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace331418503'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.deleteCustomerUsingInvalidId()'><b>deleteCustomerUsingInvalidId</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can't delete Customer info using Invalid Customer Id<br>Parameters: 2011</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace437630857", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace437630857'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.deleteCustomerUsingInvalidId()'><b>deleteCustomerUsingInvalidId</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can't delete Customer info using Invalid Customer Id<br>Parameters: </td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1365575811", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1365575811'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.deleteCustomerUsingInvalidId()'><b>deleteCustomerUsingInvalidId</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can't delete Customer info using Invalid Customer Id<br>Parameters: #$.sdsdds-</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1540476618", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1540476618'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.deleteCustomerUsingInvalidId()'><b>deleteCustomerUsingInvalidId</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can't delete Customer info using Invalid Customer Id<br>Parameters: retfrtfrtr</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1234905692", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1234905692'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.deleteCustomerUsingValidId()'><b>deleteCustomerUsingValidId</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can delete Customer info using valid Customer Id</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1363800072", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1363800072'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.editCustomerUsingInvalidData()'><b>editCustomerUsingInvalidData</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can't edit Customer info using Invalid Customer data<br>Parameters: , , , , , </td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1510087865", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1510087865'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.editCustomerUsingInvalidData()'><b>editCustomerUsingInvalidData</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can't edit Customer info using Invalid Customer data<br>Parameters: ABC, dfdf, dfdfdf, 19127, 654685625, sdsds@gmail.com</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace254918854", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace254918854'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.editCustomerUsingInvalidData()'><b>editCustomerUsingInvalidData</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can't edit Customer info using Invalid Customer data<br>Parameters: ABC, dfdf, dfdfdf, !@#$%^, 654685625, sdsds@gmail.com</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1251219927", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1251219927'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.editCustomerUsingInvalidData()'><b>editCustomerUsingInvalidData</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can't edit Customer info using Invalid Customer data<br>Parameters: ABC, dfdf, dfdfdf, sfdasd, 654685625, sdsds@gmail.com</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace780843029", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace780843029'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.editCustomerUsingInvalidData()'><b>editCustomerUsingInvalidData</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can't edit Customer info using Invalid Customer data<br>Parameters: ABC, dfdf, dfdfdf, 191275, dfsgdfgdfgfg, sdsds@gmail.com</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace220165304", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace220165304'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.editCustomerUsingInvalidData()'><b>editCustomerUsingInvalidData</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can't edit Customer info using Invalid Customer data<br>Parameters: ABC, dfdf, dfdfdf, 191275, !@#$%, sdsds@gmail.com</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace973604791", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace973604791'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.editCustomerUsingInvalidData()'><b>editCustomerUsingInvalidData</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can't edit Customer info using Invalid Customer data<br>Parameters: ABC, 454245, dfdfdf, 191275, 654685625, sdsds@gmail.com</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1466558382", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1466558382'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.editCustomerUsingInvalidData()'><b>editCustomerUsingInvalidData</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can't edit Customer info using Invalid Customer data<br>Parameters: ABC, !@#$%, dfdfdf, 191275, 654685625, sdsds@gmail.com</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace649630909", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace649630909'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.editCustomerUsingInvalidData()'><b>editCustomerUsingInvalidData</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can't edit Customer info using Invalid Customer data<br>Parameters: ABC, dfedfdfd, 45444, 191275, 654685625, sdsds@gmail.com</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace817054343", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace817054343'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.editCustomerUsingInvalidData()'><b>editCustomerUsingInvalidData</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can't edit Customer info using Invalid Customer data<br>Parameters: ABC, dfedfdfd, !@#$%, 191275, 654685625, sdsds@gmail.com</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace913746983", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace913746983'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.editCustomerUsingInvalidData()'><b>editCustomerUsingInvalidData</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can't edit Customer info using Invalid Customer data<br>Parameters: ABC, dfedfdfd, dfdfdf, 191275, 654685625, !#$%.com</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1224064486", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1224064486'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.editCustomerUsingInvalidId()'><b>editCustomerUsingInvalidId</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can't edit Customer info using Invalid Customer Id<br>Parameters: 2011</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1111379131", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1111379131'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.editCustomerUsingInvalidId()'><b>editCustomerUsingInvalidId</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can't edit Customer info using Invalid Customer Id<br>Parameters: </td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1135935001", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1135935001'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.editCustomerUsingInvalidId()'><b>editCustomerUsingInvalidId</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can't edit Customer info using Invalid Customer Id<br>Parameters: #$.sdsdds-</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace355885103", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace355885103'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.editCustomerUsingInvalidId()'><b>editCustomerUsingInvalidId</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can't edit Customer info using Invalid Customer Id<br>Parameters: retfrtfrtr</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace706665172", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace706665172'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.editCustomerUsingValidData()'><b>editCustomerUsingValidData</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can edit Customer using valid Customer Data</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace708153797", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace708153797'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.editCustomerUsingValidId()'><b>editCustomerUsingValidId</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can edit Customer using valid Customer Id</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace61426020", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace61426020'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.nameGenderBirthDateEditable()'><b>nameGenderBirthDateEditable</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can't edit Customer Name,Gender,Date Of Birth</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1153933106", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1153933106'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.resetCustomerDataForm()'><b>resetCustomerDataForm</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can reset Edit Customer data form</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace54960993", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace54960993'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.resetCustomerForm()'><b>resetCustomerForm</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can Reset Customer Form<br>Parameters: , , , , , , , , , , , </td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1940055334", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1940055334'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.resetCustomerForm()'><b>resetCustomerForm</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can Reset Customer Form<br>Parameters: Auntor, male, 11, 22, 1998, pathrail, Tangail, dhaka, 12123, 1795486253, achar@gmail.com, 12345##abc</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace335107734", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace335107734'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.resetCustomerForm()'><b>resetCustomerForm</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can Reset Customer Form<br>Parameters: Auntor, male, 11, 22, 1998, pathrail, Tangail, dhaka, 1212345, 1795486253, achar@gmail.com, 12345##abc</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1757317128", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1757317128'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.resetCustomerForm()'><b>resetCustomerForm</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can Reset Customer Form<br>Parameters: ABC, female, 11, 22, 1998, pathrail, Tangail, dhaka, abcde, 1795486253, achar@gmail.com, 12345##abc</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1804441305", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1804441305'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.resetCustomerForm()'><b>resetCustomerForm</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can Reset Customer Form<br>Parameters: Auntor, male, 11, 22, 1998, pathrail, Tangail, dhaka, 191212, sdigdskjidk, achar@gmail.com, 12345##abc</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1971783162", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1971783162'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.resetCustomerForm()'><b>resetCustomerForm</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can Reset Customer Form<br>Parameters: Auntor, male, 11, 22, 1998, pathrail, Tangail, 123456, 191212, 1795486253, achar@gmail.com, 12345##abc</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace151442075", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace151442075'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.resetCustomerForm()'><b>resetCustomerForm</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can Reset Customer Form<br>Parameters: 522, male, 11, 22, 1998, pathrail, Tangail, dhaka, 191212, 1795486253, achar@gmail.com, 12345##abc</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace70695990", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace70695990'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.resetCustomerForm()'><b>resetCustomerForm</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can Reset Customer Form<br>Parameters: grfg, female, 11, 22, 1998, pathrail, 123456, dhaka, 191212, 1795486253, achar@gmail.com, 12345##abc</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1615617512", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1615617512'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.resetCustomerForm()'><b>resetCustomerForm</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can Reset Customer Form<br>Parameters: Auntor, male, 11, 22, 1998, pathrail, Tangail, dhaka, 191212, 1795486253, 4445@45#dfg, 12345##abc</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace107994825", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace107994825'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.resetDeleteCustomerForm()'><b>resetDeleteCustomerForm</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can reset Delete Customer Form</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace203409950", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace203409950'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
+<tr>
+<td title='com.guru99BankingDemo.testCases.CustomerModuleTest.resetEditCustomerIdForm()'><b>resetEditCustomerIdForm</b><br>Test class: com.guru99BankingDemo.testCases.CustomerModuleTest<br>Test method: Manager can reset Edit Customer Id form</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1829460911", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1829460911'><pre>org.testng.TestNGException: 
+Parameter &apos;Headless&apos; is required by BeforeClass on method appSetUp but has not been marked @Optional or defined
+in /Users/auntoracharja/Work/SQA/Automation/Selenium/guru99BankingDemoProject_Selenium/testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:268)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.guru99BankingDemo.testCases.CustomerModuleTest@1a3869f4</td></tr>
 </table><p>
 </body>
 </html>

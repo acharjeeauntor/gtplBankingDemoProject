@@ -1,5 +1,13 @@
 package com.guru99BankingDemo.testCases;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
@@ -44,7 +52,7 @@ public class AccountModuleTest extends BaseClass {
 	XLUtils xlutils;
 	Config config;
 
-	@Test(priority = 1, description = "Manager can add new Account using valid data")
+	@Test(priority = 1, description = "Manager can add new Account using valid data",groups= {"Sanity"})
 	public void addNewAccountUsingValidData() throws InterruptedException, IOException {
 
 		objNewAccount = new NewAccountPage(driver);
@@ -54,15 +62,15 @@ public class AccountModuleTest extends BaseClass {
 		objNewAccount.addNewAccount(customerId, accType, initialDeposit);
 		Thread.sleep(2000);
 		if (driver.getPageSource().contains("Account Generated Successfully!!!")) {
-			logger.info("Test Passed");
+			
 			config.setAccountId(driver.findElement(By.xpath("//tbody/tr[4]/td[2]")).getText());
-			Assert.assertTrue(true);
+			AssertJUnit.assertTrue(true);
 		} else {
-			logger.warn("Test Failed");
+			
 			driver.switchTo().alert().accept();
 			driver.switchTo().defaultContent();
 			captureScreen(driver, "addNewAccountUsingValidData");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -77,12 +85,12 @@ public class AccountModuleTest extends BaseClass {
 		objNewAccount.resetNewAccountForm(customerId, accType, initialDeposit);
 		Thread.sleep(2000);
 		if (objNewAccount.isCustomerIdEmpty()) {
-			logger.info("Test Passed");
-			Assert.assertTrue(true);
+			
+			AssertJUnit.assertTrue(true);
 		} else {
-			logger.warn("Test Failed");
+			
 			captureScreen(driver, "resetAddNewAccountForm");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -97,12 +105,12 @@ public class AccountModuleTest extends BaseClass {
 
 		objAccountOptions.newAccountOption();
 		if (objNewAccount.isSavingsSelect()) {
-			logger.info("Test Passed");
-			Assert.assertTrue(true);
+			
+			AssertJUnit.assertTrue(true);
 		} else {
-			logger.warn("Test Failed");
+		
 			captureScreen(driver, "checkSavingsSelected");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -117,13 +125,13 @@ public class AccountModuleTest extends BaseClass {
 		Thread.sleep(2000);
 
 		if (isAlertPresent()) {
-			logger.info("Test Passed");
+			
 			driver.switchTo().alert().accept();
-			Assert.assertTrue(true);
+			AssertJUnit.assertTrue(true);
 		} else if (driver.getPageSource().contains("Account Generated Successfully!!!")) {
-			logger.warn("Test Failed");
+			
 			captureScreen(driver, "addNewAccountUsingInvalidData");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -137,13 +145,13 @@ public class AccountModuleTest extends BaseClass {
 		Thread.sleep(2000);
 
 		if (driver.getPageSource().contains("Edit Account Entry Form")) {
-			logger.info("Test Passed");
-			Assert.assertTrue(true);
+			
+			AssertJUnit.assertTrue(true);
 		} else {
-			logger.warn("Test Failed");
+			
 			driver.switchTo().alert().accept();
 			captureScreen(driver, "editAccountUsingValidAccountNo");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -157,12 +165,12 @@ public class AccountModuleTest extends BaseClass {
 		Thread.sleep(2000);
 
 		if (objEditAccount.isAccountNoEmpty()) {
-			logger.info("Test Passed");
-			Assert.assertTrue(true);
+			
+			AssertJUnit.assertTrue(true);
 		} else {
-			logger.warn("Test Failed");
+		
 			captureScreen(driver, "resetAccountUsingValidAccountNo");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -176,13 +184,13 @@ public class AccountModuleTest extends BaseClass {
 		Thread.sleep(2000);
 
 		if (driver.getPageSource().contains("Account details updated Successfully!!!")) {
-			logger.info("Test Passed");
-			Assert.assertTrue(true);
+			
+			AssertJUnit.assertTrue(true);
 		} else {
-			logger.warn("Test Failed");
+		
 			driver.switchTo().alert().accept();
 			captureScreen(driver, "editAccountEntryForm");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -196,12 +204,12 @@ public class AccountModuleTest extends BaseClass {
 		Thread.sleep(2000);
 
 		if (driver.getPageSource().contains("Edit Account Entry Form")) {
-			logger.info("Test Passed");
-			Assert.assertTrue(true);
+			
+			AssertJUnit.assertTrue(true);
 		} else {
-			logger.warn("Test Failed");
+			
 			captureScreen(driver, "resetAccountEntryForm");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 	}
 
@@ -214,13 +222,13 @@ public class AccountModuleTest extends BaseClass {
 		Thread.sleep(2000);
 
 		if (isAlertPresent()) {
-			logger.info("Test Passed");
+			
 			driver.switchTo().alert().accept();
-			Assert.assertTrue(true);
+			AssertJUnit.assertTrue(true);
 		} else {
-			logger.warn("Test Failed");
+		
 			captureScreen(driver, "editAccountUsingInvalidAccountNo");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -232,13 +240,13 @@ public class AccountModuleTest extends BaseClass {
 		loginToTheApplication();
 
 		if (objEditAccount.isCustomerIdBalanceEditable()) {
-			logger.warn("Test Failed");
+			
 			captureScreen(driver, "verifyCustomerIdBalanceEnabled");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 
 		} else {
-			logger.info("Test Passed");
-			Assert.assertTrue(true);
+		
+			AssertJUnit.assertTrue(true);
 		}
 
 	}
@@ -252,16 +260,16 @@ public class AccountModuleTest extends BaseClass {
 		driver.switchTo().alert().accept();
 
 		if (driver.switchTo().alert().getText().contains("Account Deleted Sucessfully")) {
-			logger.info("Test Passed");
+			
 			driver.switchTo().alert().accept();
-			Assert.assertTrue(true);
+			AssertJUnit.assertTrue(true);
 
 		} else {
-			logger.warn("Test Failed");
+			
 			driver.switchTo().alert().accept();
 			driver.switchTo().defaultContent();
 			captureScreen(driver, "deleteAccountUsingValidAccountNo");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 	}
 
@@ -272,13 +280,13 @@ public class AccountModuleTest extends BaseClass {
 		loginToTheApplication();
 		objDeleteAccount.resetDeleteAccountNoForm(accountId);
 		if (objDeleteAccount.isAccountNoEmpty()) {
-			logger.info("Test Passed");
-			Assert.assertTrue(true);
+			
+			AssertJUnit.assertTrue(true);
 
 		} else {
-			logger.warn("Test Failed");
+		
 			captureScreen(driver, "resetDeleteAccountForm");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 	}
 
@@ -290,22 +298,22 @@ public class AccountModuleTest extends BaseClass {
 		objDeleteAccount.AddDeleteAccountNoForm(accountId);
 
 		if (driver.switchTo().alert().getText().contains("Please fill all fields")) {
-			logger.info("Test Passed");
+			
 			driver.switchTo().alert().accept();
-			Assert.assertTrue(true);
+			AssertJUnit.assertTrue(true);
 
 		} else if (driver.switchTo().alert().getText().contains("Do you really want to delete this Account?")) {
 			driver.switchTo().alert().accept();
 			if (driver.switchTo().alert().getText().contains("Account Deleted Sucessfully")) {
-				logger.warn("Test Failed");
+	
 				driver.switchTo().alert().accept();
 				driver.switchTo().defaultContent();
 				captureScreen(driver, "deleteAccountUsingInvalidAccountNo");
-				Assert.assertTrue(false);
+				AssertJUnit.assertTrue(false);
 			} else {
-				logger.info("Test Passed");
+				
 				driver.switchTo().alert().accept();
-				Assert.assertTrue(true);
+				AssertJUnit.assertTrue(true);
 			}
 		}
 	}
@@ -318,13 +326,13 @@ public class AccountModuleTest extends BaseClass {
 		objDeposit.submitDeposit(accountId, amount, description);
 
 		if (driver.getPageSource().contains("Transaction details of Deposit for Account " + accountId)) {
-			logger.info("Test Passed");
-			Assert.assertTrue(true);
+			
+			AssertJUnit.assertTrue(true);
 
 		} else {
-			logger.warn("Test Failed");
+			
 			captureScreen(driver, "depositUsingValidData");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -337,13 +345,13 @@ public class AccountModuleTest extends BaseClass {
 		objDeposit.resetDeposit(accountId, amount, description);
 
 		if (objDeposit.isAccountNoEmpty()) {
-			logger.info("Test Passed");
-			Assert.assertTrue(true);
+			
+			AssertJUnit.assertTrue(true);
 
 		} else {
-			logger.warn("Test Failed");
+		
 			captureScreen(driver, "resetDepositForm");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -357,14 +365,14 @@ public class AccountModuleTest extends BaseClass {
 		objDeposit.submitDeposit(accountId, amount, description);
 
 		if (isAlertPresent()) {
-			logger.info("Test Passed");
+			
 			driver.switchTo().alert().accept();
-			Assert.assertTrue(true);
+			AssertJUnit.assertTrue(true);
 
 		} else if (driver.getPageSource().contains("Transaction details of Deposit for Account " + accountId)) {
-			logger.warn("Test Failed");
+			
 			captureScreen(driver, "depositUsingInvalidData");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -377,13 +385,13 @@ public class AccountModuleTest extends BaseClass {
 		objWithdrawal.submitWithdrawal(accountId, amount, description);
 
 		if (driver.getPageSource().contains("Transaction details of Withdrawal for Account " + accountId)) {
-			logger.info("Test Passed");
-			Assert.assertTrue(true);
+			
+			AssertJUnit.assertTrue(true);
 
 		} else {
-			logger.warn("Test Failed");
+		
 			captureScreen(driver, "withdrawalUsingValidData");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -396,13 +404,13 @@ public class AccountModuleTest extends BaseClass {
 		objWithdrawal.resetWithdrawal(accountId, amount, description);
 
 		if (objWithdrawal.isAccountNoEmpty()) {
-			logger.info("Test Passed");
-			Assert.assertTrue(true);
+			
+			AssertJUnit.assertTrue(true);
 
 		} else {
-			logger.warn("Test Failed");
+	
 			captureScreen(driver, "resetWithdrawalForm");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -416,14 +424,14 @@ public class AccountModuleTest extends BaseClass {
 		objWithdrawal.submitWithdrawal(accountId, amount, description);
 
 		if (isAlertPresent()) {
-			logger.info("Test Passed");
+			
 			driver.switchTo().alert().accept();
-			Assert.assertTrue(true);
+			AssertJUnit.assertTrue(true);
 
 		} else if (driver.getPageSource().contains("Transaction details of Withdrawal for Account " + accountId)) {
-			logger.warn("Test Failed");
+			
 			captureScreen(driver, "withdrawalUsingInvalidData");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -437,13 +445,13 @@ public class AccountModuleTest extends BaseClass {
 		Thread.sleep(2000);
 
 		if (driver.getPageSource().contains("Fund Transfer Details")) {
-			logger.info("Test Passed");
-			Assert.assertTrue(true);
+			
+			AssertJUnit.assertTrue(true);
 
 		} else {
-			logger.warn("Test Failed");
+			
 			captureScreen(driver, "fundTransferUsingValidData");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -456,13 +464,13 @@ public class AccountModuleTest extends BaseClass {
 		objFundTransfer.resetFundTransferForm(accountId, payeeaccount, amount, description);
 
 		if (objFundTransfer.isAccountNoEmpty()) {
-			logger.info("Test Passed");
-			Assert.assertTrue(true);
+			
+			AssertJUnit.assertTrue(true);
 
 		} else {
-			logger.warn("Test Failed");
+			
 			captureScreen(driver, "resetFundTransferForm");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -476,14 +484,14 @@ public class AccountModuleTest extends BaseClass {
 		objFundTransfer.submitFundTransfer(accountId, payeeaccount, amount, description);
 
 		if (isAlertPresent()) {
-			logger.info("Test Passed");
+			
 			driver.switchTo().alert().accept();
-			Assert.assertTrue(true);
+			AssertJUnit.assertTrue(true);
 
 		} else if (driver.getPageSource().contains("Fund Transfer Details")) {
-			logger.warn("Test Failed");
+			
 			captureScreen(driver, "fundTransferUsingInvalidData");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -500,16 +508,16 @@ public class AccountModuleTest extends BaseClass {
 		objChangePassword.submitChangePasswordForm(password, newPass, newPass);
 
 		if (driver.switchTo().alert().getText().contains("Password is Changed")) {
-			logger.info("Test Passed");
+			
 			driver.switchTo().alert().accept();
 			config.setNewManagerPass(newPass);
 			XLUtils.setCellData(path, "ChangePasswordData", 3, 0, newPass);
 			XLUtils.setCellData(path, "ChangePasswordData", 4, 0, newPass);
-			Assert.assertTrue(true);
+			AssertJUnit.assertTrue(true);
 		} else {
-			logger.warn("Test Failed");
+			
 			captureScreen(driver, "changePasswordUsingValidData");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -522,13 +530,13 @@ public class AccountModuleTest extends BaseClass {
 		objChangePassword.resetChangePasswordForm(password, newPass, newPass);
 
 		if (objChangePassword.isOldPasswordEmpty()) {
-			logger.info("Test Passed");
-			Assert.assertTrue(true);
+			
+			AssertJUnit.assertTrue(true);
 
 		} else {
-			logger.warn("Test Failed");
+	
 			captureScreen(driver, "resetChangePasswordForm");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -542,16 +550,16 @@ public class AccountModuleTest extends BaseClass {
 		objChangePassword.submitChangePasswordForm(password, newPass, confirmPass);
 
 		if (driver.switchTo().alert().getText().contains("Password is Changed")) {
-			logger.warn("Test Failed");
+			
 			driver.switchTo().alert().accept();
 			captureScreen(driver, "changePasswordUsingInvalidData");
 			config.setNewManagerPass(newPass);
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 
 		} else {
-			logger.info("Test Passed");
+	
 			driver.switchTo().alert().accept();
-			Assert.assertTrue(true);
+			AssertJUnit.assertTrue(true);
 		}
 
 	}
@@ -563,14 +571,14 @@ public class AccountModuleTest extends BaseClass {
 		objBalanceEnquiry.submitBalanceEnquiryForm(accountId);
 
 		if (driver.getPageSource().contains("Balance Details for Account " + accountId)) {
-			logger.info("Test Passed");
-			Assert.assertTrue(true);
+			
+			AssertJUnit.assertTrue(true);
 
 		} else {
-			logger.warn("Test Failed");
+			
 			driver.switchTo().alert().accept();
 			captureScreen(driver, "balanceEquiryUsingValidData");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -582,13 +590,13 @@ public class AccountModuleTest extends BaseClass {
 		objBalanceEnquiry.resetBalanceEnquiryForm(accountId);
 
 		if (objBalanceEnquiry.isAccountNoEmpty()) {
-			logger.info("Test Passed");
-			Assert.assertTrue(true);
+			
+			AssertJUnit.assertTrue(true);
 
 		} else {
-			logger.warn("Test Failed");
+			
 			captureScreen(driver, "resetBalanceEnquiryForm");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -600,14 +608,14 @@ public class AccountModuleTest extends BaseClass {
 		objBalanceEnquiry.submitBalanceEnquiryForm(accountId);
 
 		if (isAlertPresent()) {
-			logger.info("Test Passed");
+			
 			driver.switchTo().alert().accept();
-			Assert.assertTrue(true);
+			AssertJUnit.assertTrue(true);
 
 		} else {
-			logger.warn("Test Falied");
+			
 			captureScreen(driver, "balanceEquiryUsingInvalidData");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -619,14 +627,14 @@ public class AccountModuleTest extends BaseClass {
 		objMiniStatement.submitMiniStatementForm(accountId);
 
 		if (driver.getPageSource().contains("Last Five Transaction Details for Account No: " + accountId)) {
-			logger.info("Test Passed");
-			Assert.assertTrue(true);
+			
+			AssertJUnit.assertTrue(true);
 
 		} else {
-			logger.warn("Test Failed");
+			
 			driver.switchTo().alert().accept();
 			captureScreen(driver, "miniStatementUsingValidData");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -638,13 +646,13 @@ public class AccountModuleTest extends BaseClass {
 		objMiniStatement.resetMiniStatementForm(accountId);
 
 		if (objMiniStatement.isAccountNoEmpty()) {
-			logger.info("Test Passed");
-			Assert.assertTrue(true);
+			
+			AssertJUnit.assertTrue(true);
 
 		} else {
-			logger.warn("Test Failed");
+		
 			captureScreen(driver, "resetMiniStatementForm");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -656,14 +664,14 @@ public class AccountModuleTest extends BaseClass {
 		objMiniStatement.submitMiniStatementForm(accountId);
 
 		if (isAlertPresent()) {
-			logger.info("Test Passed");
+			
 			driver.switchTo().alert().accept();
-			Assert.assertTrue(true);
+			AssertJUnit.assertTrue(true);
 
 		} else {
-			logger.warn("Test Falied");
+			
 			captureScreen(driver, "miniStatementUsingInvalidData");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -676,14 +684,14 @@ public class AccountModuleTest extends BaseClass {
 				"1");
 
 		if (driver.getPageSource().contains("Transaction Details for Account No: " + accountId)) {
-			logger.info("Test Passed");
-			Assert.assertTrue(true);
+			
+			AssertJUnit.assertTrue(true);
 
 		} else {
-			logger.warn("Test Failed");
+		
 			driver.switchTo().alert().accept();
 			captureScreen(driver, "customisedStatementUsingValidData");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -696,13 +704,13 @@ public class AccountModuleTest extends BaseClass {
 				"1");
 
 		if (objCustomisedStatement.isAccountNoEmpty()) {
-			logger.info("Test Passed");
-			Assert.assertTrue(true);
+		
+			AssertJUnit.assertTrue(true);
 
 		} else {
-			logger.warn("Test Failed");
+	
 			captureScreen(driver, "resetCustomisedStatementForm");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}
@@ -717,14 +725,14 @@ public class AccountModuleTest extends BaseClass {
 				toDateMonth, toDateDay, toDateYear, miniTrans, noTrans);
 		Thread.sleep(2000);
 		if (isAlertPresent()) {
-			logger.info("Test Passed");
+			
 			driver.switchTo().alert().accept();
-			Assert.assertTrue(true);
+			AssertJUnit.assertTrue(true);
 
 		} else {
-			logger.warn("Test Failed");
+		
 			captureScreen(driver, "customisedStatementUsingInvalidData");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
 
 	}

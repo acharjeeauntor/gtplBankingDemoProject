@@ -1,53 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Sanity]">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Regression Test Suite]">
   <listeners>
     <listener class-name="com.guru99BankingDemo.utilities.Reporting"/>
   </listeners>
-  <test thread-count="5" name="Sanity Test(failed)">
-    <parameter name="browser" value="firefox"/>
-    <parameter name="Headless" value="false"/>
+  <test thread-count="5" name="Regression Test(failed)">
+    <parameter name="headless" value="false"/>
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.guru99BankingDemo.testCases.AccountModuleTest">
+      <class name="com.guru99BankingDemo.testCases.ManagerModuleTest">
         <methods>
           <include name="tearDown"/>
-          <include name="addNewAccountUsingInvalidData" invocation-numbers="0 1 2 3 4 5 6"/>
-          <include name="resetChangePasswordForm"/>
-          <include name="changePasswordUsingInvalidData" invocation-numbers="0 1 2 3"/>
-          <include name="fundTransferUsingInvalidData" invocation-numbers="0 1 2 3 4"/>
-          <include name="checkSavingsSelected"/>
-          <include name="withdrawalUsingInvalidData" invocation-numbers="0 1 2 3 4"/>
-          <include name="deleteAccountUsingInvalidAccountNo" invocation-numbers="0 1 2 3"/>
-          <include name="resetAccountUsingValidAccountNo"/>
-          <include name="balanceEquiryUsingInvalidData" invocation-numbers="0 1 2 3"/>
-          <include name="resetBalanceEnquiryForm"/>
-          <include name="resetCustomisedStatementForm"/>
-          <include name="miniStatementUsingInvalidData" invocation-numbers="0 1 2 3"/>
-          <include name="balanceEquiryUsingValidData"/>
-          <include name="depositUsingInvalidData" invocation-numbers="0 1 2 3 4"/>
-          <include name="miniStatementUsingValidData"/>
-          <include name="resetDeleteAccountForm"/>
-          <include name="changePasswordUsingValidData"/>
-          <include name="fundTransferUsingValidData"/>
-          <include name="resetDepositForm"/>
-          <include name="resetFundTransferForm"/>
-          <include name="deleteAccountUsingValidAccountNo"/>
-          <include name="resetAccountEntryForm"/>
-          <include name="verifyCustomerIdBalanceEnabled"/>
-          <include name="customisedStatementUsingValidData"/>
-          <include name="depositUsingValidData"/>
-          <include name="resetMiniStatementForm"/>
-          <include name="editAccountUsingValidAccountNo"/>
-          <include name="addNewAccountUsingValidData"/>
-          <include name="customisedStatementUsingInvalidData" invocation-numbers="0 1 2 3 4"/>
-          <include name="resetAddNewAccountForm"/>
-          <include name="editAccountUsingInvalidAccountNo"/>
-          <include name="resetWithdrawalForm"/>
+          <include name="registerUsingInvalidEmail" invocation-numbers="0"/>
           <include name="appSetUp"/>
-          <include name="editAccountEntryForm"/>
-          <include name="withdrawalUsingValidData"/>
         </methods>
-      </class> <!-- com.guru99BankingDemo.testCases.AccountModuleTest -->
+      </class> <!-- com.guru99BankingDemo.testCases.ManagerModuleTest -->
     </classes>
-  </test> <!-- Sanity Test(failed) -->
-</suite> <!-- Failed suite [Sanity] -->
+  </test> <!-- Regression Test(failed) -->
+</suite> <!-- Failed suite [Regression Test Suite] -->

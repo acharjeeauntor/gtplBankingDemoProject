@@ -7,10 +7,10 @@
 	</listeners>
 	<test thread-count="5" name="Sanity Test">
 		<parameter name="browser" value="firefox" />
-		<parameter name="Headless" value="true" />
+		 <parameter name="headless" value="false" />
 		<groups>
 			<run>
-				<include name="Sanity" />
+				<include name="sanity" />
 			</run>
 		</groups>
 		<classes>

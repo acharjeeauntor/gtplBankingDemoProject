@@ -6,11 +6,10 @@
 			class-name="com.guru99BankingDemo.utilities.Reporting" />
 	</listeners>
 	<test thread-count="5" name="Regression Test">
-		<parameter name="browser" value="firefox" />
-		<parameter name="Headless" value="false" />
+		<parameter name="browser" value="chrome" />
+		<parameter name="headless" value="false" />
 		<classes>
 			<class name="com.guru99BankingDemo.testCases.ManagerModuleTest" />
-			<class name="com.guru99BankingDemo.testCases.CustomerModuleTest" />
 		</classes>
 	</test> <!-- Regression Test -->
 </suite> <!-- Regression -->

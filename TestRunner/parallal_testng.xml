@@ -7,7 +7,7 @@
 	</listeners>
 	<test thread-count="5" parallel="classes" name="Parallal Test">
 		<parameter name="browser" value="chrome" />
-		<parameter name="Headless" value="true" />
+		<parameter name="headless" value="true" />
 		<classes>
 			<class name="com.guru99BankingDemo.testCases.AccountModuleTest" />
 			<class name="com.guru99BankingDemo.testCases.ManagerModuleTest" />

@@ -4,6 +4,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterMethod;
 import java.io.File;
 import java.io.IOException;
 
@@ -36,9 +37,10 @@ public class BaseClass {
 	
 	public static WebDriver driver;
 
-    @Parameters({"browser","Headless"})
+    @Parameters({"browser","headless"})
 	@BeforeClass
 	public void appSetUp(String br,String mode) throws IOException {
+   
 
 		if (br.equals("chrome")) {
 			if(mode.equals("true")) {
@@ -70,7 +72,34 @@ public class BaseClass {
 		driver.manage().window().maximize();
 	}
 
-
+	
+//	@Parameters({"browser"})
+//	@BeforeClass
+//	public void appSetUp(String br) throws IOException {
+//
+//		if (br.equals("chrome")) {
+//			
+//				ChromeOptions options = new ChromeOptions();
+//				//options.setHeadless(true);
+//				options.addArguments("--remote-allow-origins=*");
+//				driver = new ChromeDriver(options);
+//			
+//		} else if (br.equals("firefox")) {
+//			
+//				FirefoxOptions options = new FirefoxOptions();
+//				//options.setHeadless(true);
+//				driver = new FirefoxDriver(options);
+//			
+//		}else if(br.equals("safari")) {
+//			//SafariOptions options = new SafariOptions();
+//			 driver = new SafariDriver();
+//		}
+//		
+//		
+//		driver.manage().window().maximize();
+//	}
+	
+	
 	@AfterClass
 	public void tearDown() {
 		driver.quit();

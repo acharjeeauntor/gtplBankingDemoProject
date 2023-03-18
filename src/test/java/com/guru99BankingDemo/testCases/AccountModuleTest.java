@@ -8,6 +8,8 @@ import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
@@ -52,7 +54,7 @@ public class AccountModuleTest extends BaseClass {
 	XLUtils xlutils;
 	Config config;
 
-	@Test(priority = 1, description = "Manager can add new Account using valid data",groups= {"Sanity"})
+	@Test(groups= {"sanity"},priority = 1, description = "Manager can add new Account using valid data")
 	public void addNewAccountUsingValidData() throws InterruptedException, IOException {
 
 		objNewAccount = new NewAccountPage(driver);

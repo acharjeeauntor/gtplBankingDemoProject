@@ -15,9 +15,12 @@ Dependency Used:apache poi,extentreports,log4j,testng,selenium-java,etc<br>
 IDE: Intellij<br>
 
 --------------------------------------------------
+
 ### To Run the project with Different Test Runner:<br>
+
 Use the following command from the Cmd: mvn clean test -Dfilename=testNG_File_name.xml<br>
 Example: mvn clean test -Dfilename=regression_testng.xml<br>
+
 --------------------------------------------------
 
 Number Of Module: 3 <br>

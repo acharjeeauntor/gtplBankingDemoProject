@@ -15,6 +15,10 @@ Dependency Used:apache poi,extentreports,log4j,testng,selenium-java,etc<br>
 IDE: Intellij<br>
 
 --------------------------------------------------
+## Project Architecture: <br>
+![Selenium_web_project_Arch](https://user-images.githubusercontent.com/38497405/232030946-225e3cfa-295a-441c-a742-c5cb84c9884c.png)
+
+--------------------------------------------------
 
 ### To Run the project with Different Test Runner:<br>
 

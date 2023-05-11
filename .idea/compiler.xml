@@ -9,8 +9,5 @@
         <module name="guru99BankingDemo" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="guru99BankingDemo" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

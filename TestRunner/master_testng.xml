@@ -9,6 +9,6 @@
 	<suite-files>
 		<suite-file path="./sanity_testng.xml"></suite-file>
 		<suite-file path="./regression_testng.xml"></suite-file>
-		<suite-file path="./parallal_testng.xml"></suite-file>
+		<suite-file path="./parallel_testng.xml"></suite-file>
 	</suite-files>
 </suite> <!-- Master Suite -->

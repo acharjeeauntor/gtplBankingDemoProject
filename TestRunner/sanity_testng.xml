@@ -6,13 +6,13 @@
 			class-name="com.guru99BankingDemo.utilities.Reporting" />
 	</listeners>
 	<test thread-count="5" name="Sanity Test">
-		<parameter name="browser" value="firefox" />
+		<parameter name="browser" value="chrome" />
 		 <parameter name="headless" value="false" />
-		<groups>
-			<run>
-				<include name="sanity" />
-			</run>
-		</groups>
+<!--		<groups>-->
+<!--			<run>-->
+<!--				<include name="sanity" />-->
+<!--			</run>-->
+<!--		</groups>-->
 		<classes>
 			<class name="com.guru99BankingDemo.testCases.AccountModuleTest" />
 			<class name="com.guru99BankingDemo.testCases.ManagerModuleTest" />
